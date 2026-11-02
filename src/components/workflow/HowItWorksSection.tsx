@@ -94,56 +94,52 @@ export default function HowItWorksSection() {
   const [activeStep, setActiveStep] = useState<number>(0);
 
   return (
-    <section id="how-it-works" className="py-24 bg-[#020512] relative overflow-hidden border-t border-white/10">
-      {/* Background ambient decorative glow */}
-      <div className="absolute top-1/4 right-0 w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[150px] pointer-events-none" />
-      <div className="absolute bottom-10 left-10 w-[400px] h-[400px] bg-indigo-600/10 rounded-full blur-[140px] pointer-events-none" />
-
+    <section id="how-it-works" className="py-24 bg-slate-50 text-slate-900 relative overflow-hidden border-t border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-500/15 border border-blue-400/30 text-blue-300 text-xs font-semibold uppercase tracking-wider">
+          <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200/80 text-blue-700 text-xs font-semibold uppercase tracking-wider">
             <Zap className="w-3.5 h-3.5" />
             <span>How Resvor Works</span>
           </div>
 
-          <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-white leading-tight">
+          <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-slate-950 leading-tight">
             The 4-Step Operating Workflow
           </h2>
 
-          <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
+          <p className="text-base sm:text-lg text-slate-600 leading-relaxed font-normal">
             Designed specifically for the fast-paced, dim-light reality of upscale lounges and nightlife. Here is how Resvor powers your floor from first configuration to recurring patron loyalty.
           </p>
         </div>
 
         {/* Step Progress Navigation Bar */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mb-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
           {WORKFLOW_STEPS.map((step, idx) => {
             const isActive = activeStep === idx;
             return (
               <button
                 key={step.number}
                 onClick={() => setActiveStep(idx)}
-                className={`p-4 rounded-2xl border text-left transition-all cursor-pointer relative overflow-hidden ${
+                className={`p-5 rounded-2xl border text-left transition-all cursor-pointer relative overflow-hidden ${
                   isActive
-                    ? "bg-gradient-to-b from-blue-950/80 to-[#060e2e] border-blue-400 shadow-xl shadow-blue-950/70 scale-[1.02]"
-                    : "bg-slate-900/50 border-white/10 hover:border-white/20 hover:bg-slate-900/80"
+                    ? "bg-white border-blue-600 shadow-xl shadow-blue-500/15 scale-[1.02]"
+                    : "bg-white/80 border-slate-200 hover:border-slate-300 hover:bg-white shadow-sm"
                 }`}
               >
                 {isActive && (
-                  <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-400 to-indigo-400" />
+                  <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-700" />
                 )}
-                <div className="flex items-center justify-between mb-2">
-                  <span className={`text-xl font-black font-mono ${isActive ? "text-blue-300" : "text-slate-500"}`}>
+                <div className="flex items-center justify-between mb-2.5">
+                  <span className={`text-2xl font-black font-mono ${isActive ? "text-blue-600" : "text-slate-400"}`}>
                     {step.number}
                   </span>
-                  <span className={`text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full ${
-                    isActive ? "bg-blue-500/20 text-blue-200 border border-blue-400/30" : "bg-slate-800 text-slate-400"
+                  <span className={`text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full ${
+                    isActive ? "bg-blue-50 text-blue-700 border border-blue-200" : "bg-slate-100 text-slate-500"
                   }`}>
                     Phase {idx + 1}
                   </span>
                 </div>
-                <h4 className="text-xs font-bold text-white line-clamp-2">
+                <h4 className="text-sm font-bold text-slate-900 line-clamp-2">
                   {step.title}
                 </h4>
               </button>
@@ -152,18 +148,18 @@ export default function HowItWorksSection() {
         </div>
 
         {/* Selected Step Detailed Operational Card */}
-        <div className="rounded-3xl bg-slate-950/90 border border-blue-500/30 p-6 sm:p-10 shadow-2xl backdrop-blur-xl">
+        <div className="rounded-3xl bg-white border border-slate-200 p-6 sm:p-10 shadow-xl">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             {/* Left: Deep Step Overview & Breakdown */}
             <div className="lg:col-span-7 space-y-6">
-              <div className="space-y-2">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/15 border border-blue-400/30 text-blue-300 text-xs font-semibold">
+              <div className="space-y-2.5">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-200/80 text-blue-700 text-xs font-semibold">
                   <span>{WORKFLOW_STEPS[activeStep].badge}</span>
                 </div>
-                <h3 className="text-2xl sm:text-3xl font-extrabold text-white leading-tight">
+                <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-950 leading-tight">
                   {WORKFLOW_STEPS[activeStep].tagline}
                 </h3>
-                <p className="text-sm text-slate-300 leading-relaxed">
+                <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
                   {WORKFLOW_STEPS[activeStep].summary}
                 </p>
               </div>
@@ -171,24 +167,24 @@ export default function HowItWorksSection() {
               {/* Bulleted operational details */}
               <div className="space-y-3 pt-2">
                 {WORKFLOW_STEPS[activeStep].details.map((item, i) => (
-                  <div key={i} className="flex items-start gap-3 text-xs sm:text-sm text-slate-200">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
-                    <span className="leading-relaxed">{item}</span>
+                  <div key={i} className="flex items-start gap-3 text-xs sm:text-sm text-slate-700">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                    <span className="leading-relaxed font-medium">{item}</span>
                   </div>
                 ))}
               </div>
 
               {/* Quick Navigation Between Steps */}
-              <div className="flex items-center gap-3 pt-4 border-t border-white/10 text-xs text-slate-400">
+              <div className="flex items-center gap-3 pt-4 border-t border-slate-100 text-xs text-slate-500">
                 <span>Navigate workflow:</span>
                 {WORKFLOW_STEPS.map((_, i) => (
                   <button
                     key={i}
                     onClick={() => setActiveStep(i)}
-                    className={`w-7 h-7 rounded-lg text-xs font-bold transition-all cursor-pointer ${
+                    className={`w-8 h-8 rounded-lg text-xs font-bold transition-all cursor-pointer ${
                       activeStep === i
-                        ? "bg-blue-600 text-white shadow-md shadow-blue-600/40"
-                        : "bg-slate-800 text-slate-400 hover:text-white"
+                        ? "bg-blue-600 text-white shadow-md shadow-blue-600/30"
+                        : "bg-slate-100 text-slate-600 hover:bg-slate-200"
                     }`}
                   >
                     0{i + 1}
@@ -197,8 +193,8 @@ export default function HowItWorksSection() {
               </div>
             </div>
 
-            {/* Right: Operational Role & System Mechanics Panel */}
-            <div className="lg:col-span-5 bg-gradient-to-b from-[#071133] to-[#04081c] rounded-2xl border border-white/15 p-6 sm:p-7 space-y-5 shadow-xl">
+            {/* Right: Operational Role & System Mechanics Panel (Midnight Navy Luxury Contrast) */}
+            <div className="lg:col-span-5 bg-gradient-to-b from-[#071133] to-[#04081c] rounded-2xl border border-blue-900/40 p-6 sm:p-7 space-y-5 shadow-2xl text-white">
               <div className="flex items-center justify-between border-b border-white/10 pb-3">
                 <span className="text-xs font-bold uppercase tracking-wider text-slate-300 flex items-center gap-2">
                   <Clock className="w-3.5 h-3.5 text-blue-400" />
@@ -232,7 +228,7 @@ export default function HowItWorksSection() {
               </div>
 
               {/* Security & Reliability Stamp */}
-              <div className="p-3.5 rounded-xl bg-blue-950/40 border border-blue-500/20 text-xs text-blue-200 flex items-start gap-2.5">
+              <div className="p-3.5 rounded-xl bg-blue-950/50 border border-blue-500/20 text-xs text-blue-200 flex items-start gap-2.5">
                 <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
                 <p className="text-[11px] text-slate-300 leading-relaxed">
                   Every step is backed by tokenized encryption, audit logging, and automated backups, ensuring your guest records and payments remain private and protected.
@@ -245,4 +241,3 @@ export default function HowItWorksSection() {
     </section>
   );
 }
-
