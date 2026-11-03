@@ -23,13 +23,13 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: -0.025em;
 }
 
-/* Luxury Nightlife Midnight Gradient */
+/* Luxury Nightlife Midnight Gradient - Saturated Royal Navy Blue at Top */
 .bg-lounge-gradient {
-  background: linear-gradient(180deg, #070D2B 0%, #0A1442 35%, #050A1F 70%, #02040D 100%);
+  background: linear-gradient(180deg, #0b1854 0%, #0d1e63 25%, #060d2e 65%, #02040d 100%);
 }
 
 .bg-hero-radial {
-  background: radial-gradient(circle at 50% 15%, rgba(37, 99, 235, 0.22) 0%, rgba(10, 19, 66, 0.4) 40%, rgba(3, 6, 20, 0.95) 80%);
+  background: radial-gradient(circle at 50% 0%, rgba(37, 99, 235, 0.45) 0%, rgba(13, 30, 99, 0.5) 40%, rgba(3, 6, 20, 0.95) 85%);
 }
 
 .bg-glass-card {

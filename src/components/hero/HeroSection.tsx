@@ -19,10 +19,10 @@ import {
 
 export default function HeroSection() {
   return (
-    <section className="relative pt-10 pb-20 sm:pt-16 sm:pb-28 overflow-hidden bg-lounge-gradient">
+    <section className="relative pt-28 pb-20 sm:pt-36 sm:pb-28 overflow-hidden bg-lounge-gradient">
       {/* Background ambient lighting and luxury mesh glow */}
       <div className="absolute inset-0 bg-hero-radial pointer-events-none" />
-      <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[850px] h-[450px] bg-blue-600/15 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute -top-10 left-1/2 -translate-x-1/2 w-[900px] h-[450px] bg-blue-500/30 rounded-full blur-[140px] pointer-events-none" />
       <div className="absolute top-1/3 -left-32 w-96 h-96 bg-indigo-600/10 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute bottom-10 -right-32 w-96 h-96 bg-blue-500/10 rounded-full blur-[120px] pointer-events-none" />
 

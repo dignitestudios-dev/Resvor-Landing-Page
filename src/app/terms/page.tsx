@@ -16,7 +16,7 @@ export default function TermsPage() {
       {/* Sticky Global Navigation */}
       <Navbar />
 
-      <main className="flex-1 py-16 sm:py-24 relative overflow-hidden bg-lounge-gradient">
+      <main className="flex-1 pt-28 pb-16 sm:pt-36 sm:pb-24 relative overflow-hidden bg-lounge-gradient">
         {/* Ambient lighting */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-blue-600/10 rounded-full blur-[140px] pointer-events-none" />
 
