@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Mail, ArrowUpRight, Globe, Users, Ticket } from "lucide-react";
+import ScrollReveal from "@/components/ui/ScrollReveal";
 
 export default function Footer() {
   return (
@@ -10,102 +11,104 @@ export default function Footer() {
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-28 bg-blue-600/10 blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-14 pb-12 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-          {/* Brand Column */}
-          <div className="space-y-4">
-            <Link href="/" className="inline-flex items-center drop-shadow-[0_4px_16px_rgba(37,99,235,0.25)]">
-              <Image
-                src="/resvor-logo.png"
-                alt="Resvor - Plan Better. Party Smarter."
-                width={160}
-                height={44}
-                className="h-10 sm:h-11 w-auto object-contain object-left hover:opacity-90 transition-opacity"
-              />
-            </Link>
+        <ScrollReveal delay={100} duration={800}>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+            {/* Brand Column */}
+            <div className="space-y-4">
+              <Link href="/" className="inline-flex items-center drop-shadow-[0_4px_16px_rgba(37,99,235,0.25)] hover:opacity-95 transition-opacity">
+                <Image
+                  src="/resvor-logo.png"
+                  alt="Resvor - Plan Better. Party Smarter."
+                  width={160}
+                  height={44}
+                  className="h-10 sm:h-11 w-auto object-contain object-left"
+                />
+              </Link>
 
-            <p className="text-xs text-slate-300 max-w-sm leading-relaxed">
-              The web operating platform connecting premier cocktail lounges, patrons, floor operations, and event promoter networks.
-            </p>
+              <p className="text-xs text-slate-300 max-w-sm leading-relaxed">
+                The web operating platform connecting premier cocktail lounges, patrons, floor operations, and event promoter networks.
+              </p>
 
-            <div className="pt-1 flex items-center gap-2 text-xs text-slate-300">
-              <Mail className="w-3.5 h-3.5 text-blue-400 shrink-0" />
-              <a href="mailto:support@lladner.com" className="hover:text-blue-300 font-medium transition-colors">
-                support@lladner.com
-              </a>
-            </div>
-          </div>
-
-          {/* Web Apps Direct Links */}
-          <div className="space-y-3">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-white">Live Web Apps</h4>
-            <ul className="space-y-3 text-xs">
-              <li>
-                <a
-                  href="https://www.resvor.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-slate-300 hover:text-white font-medium transition-colors flex items-center justify-between group"
-                >
-                  <span className="flex items-center gap-2">
-                    <Globe className="w-4 h-4 text-blue-400" />
-                    <span>Main Platform</span>
-                  </span>
-                  <ArrowUpRight className="w-3.5 h-3.5 text-slate-500 group-hover:text-blue-400 transition-colors" />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://workforce.resvor.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-slate-300 hover:text-white font-medium transition-colors flex items-center justify-between group"
-                >
-                  <span className="flex items-center gap-2">
-                    <Users className="w-4 h-4 text-indigo-400" />
-                    <span>Workforce Portal</span>
-                  </span>
-                  <ArrowUpRight className="w-3.5 h-3.5 text-slate-500 group-hover:text-indigo-400 transition-colors" />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://promoter.resvor.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-slate-300 hover:text-white font-medium transition-colors flex items-center justify-between group"
-                >
-                  <span className="flex items-center gap-2">
-                    <Ticket className="w-4 h-4 text-purple-400" />
-                    <span>Promoter Portal</span>
-                  </span>
-                  <ArrowUpRight className="w-3.5 h-3.5 text-slate-500 group-hover:text-purple-400 transition-colors" />
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Quick Navigation & Contact */}
-          <div className="space-y-3">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-white">Contact & Info</h4>
-            <ul className="space-y-3 text-xs">
-              <li>
-                <a href="#web-apps" className="text-slate-300 hover:text-white transition-colors">
-                  Web Applications
-                </a>
-              </li>
-              <li>
-                <a href="#about" className="text-slate-300 hover:text-white transition-colors">
-                  About Resvor
-                </a>
-              </li>
-              <li>
-                <a href="mailto:support@lladner.com" className="text-blue-400 hover:text-blue-300 font-medium transition-colors">
+              <div className="pt-1 flex items-center gap-2 text-xs text-slate-300">
+                <Mail className="w-3.5 h-3.5 text-blue-400 shrink-0" />
+                <a href="mailto:support@lladner.com" className="hover:text-blue-300 font-medium transition-colors font-mono">
                   support@lladner.com
                 </a>
-              </li>
-            </ul>
+              </div>
+            </div>
+
+            {/* Web Apps Direct Links */}
+            <div className="space-y-3">
+              <h4 className="text-xs font-bold uppercase tracking-wider text-white">Live Web Apps</h4>
+              <ul className="space-y-3 text-xs">
+                <li>
+                  <a
+                    href="https://www.resvor.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-slate-300 hover:text-white font-medium transition-colors flex items-center justify-between group"
+                  >
+                    <span className="flex items-center gap-2">
+                      <Globe className="w-4 h-4 text-blue-400 group-hover:rotate-12 transition-transform" />
+                      <span>Main Platform</span>
+                    </span>
+                    <ArrowUpRight className="w-3.5 h-3.5 text-slate-500 group-hover:text-blue-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://workforce.resvor.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-slate-300 hover:text-white font-medium transition-colors flex items-center justify-between group"
+                  >
+                    <span className="flex items-center gap-2">
+                      <Users className="w-4 h-4 text-indigo-400 group-hover:scale-110 transition-transform" />
+                      <span>Workforce Portal</span>
+                    </span>
+                    <ArrowUpRight className="w-3.5 h-3.5 text-slate-500 group-hover:text-indigo-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://promoter.resvor.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-slate-300 hover:text-white font-medium transition-colors flex items-center justify-between group"
+                  >
+                    <span className="flex items-center gap-2">
+                      <Ticket className="w-4 h-4 text-purple-400 group-hover:-rotate-12 transition-transform" />
+                      <span>Promoter Portal</span>
+                    </span>
+                    <ArrowUpRight className="w-3.5 h-3.5 text-slate-500 group-hover:text-purple-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            {/* Quick Navigation & Contact */}
+            <div className="space-y-3">
+              <h4 className="text-xs font-bold uppercase tracking-wider text-white">Contact & Info</h4>
+              <ul className="space-y-3 text-xs">
+                <li>
+                  <a href="#web-apps" className="text-slate-300 hover:text-white transition-colors">
+                    Web Applications
+                  </a>
+                </li>
+                <li>
+                  <a href="#about" className="text-slate-300 hover:text-white transition-colors">
+                    About Resvor
+                  </a>
+                </li>
+                <li>
+                  <a href="mailto:support@lladner.com" className="text-blue-400 hover:text-blue-300 font-medium transition-colors font-mono">
+                    support@lladner.com
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
-        </div>
+        </ScrollReveal>
 
         {/* Bottom Legal Copyright */}
         <div className="mt-12 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
