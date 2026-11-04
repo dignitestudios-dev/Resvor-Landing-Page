@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Mail, ArrowUpRight, Globe, Users, Ticket, Layers, Info, ChevronRight } from "lucide-react";
+import { Mail, ArrowUpRight, Globe, Users, Ticket, Layers, Info, ChevronRight, HelpCircle, Sparkles } from "lucide-react";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -68,7 +68,7 @@ export default function Navbar() {
             </Link>
 
             {/* Desktop Navigation Links */}
-            <nav className="hidden md:flex items-center gap-8 text-sm font-semibold">
+            <nav className="hidden md:flex items-center gap-7 text-sm font-semibold">
               <a
                 href="#web-apps"
                 className="text-slate-200 hover:text-white transition-colors py-1 flex items-center gap-1.5 group"
@@ -80,17 +80,28 @@ export default function Navbar() {
                 </span>
               </a>
               <a
+                href="#how-it-works"
+                className="text-slate-200 hover:text-white transition-colors py-1"
+              >
+                How It Works
+              </a>
+              <a
+                href="#features"
+                className="text-slate-200 hover:text-white transition-colors py-1"
+              >
+                Features
+              </a>
+              <a
                 href="#about"
                 className="text-slate-200 hover:text-white transition-colors py-1"
               >
-                About Resvor
+                About
               </a>
               <a
-                href="mailto:support@lladner.com"
-                className="text-slate-200 hover:text-white transition-colors py-1 flex items-center gap-1.5"
+                href="#faq"
+                className="text-slate-200 hover:text-white transition-colors py-1"
               >
-                <Mail className="w-4 h-4 text-blue-400" />
-                <span>Contact</span>
+                FAQ
               </a>
             </nav>
 
@@ -108,7 +119,7 @@ export default function Navbar() {
                 href="https://www.resvor.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-4 py-2 text-xs font-bold rounded-xl text-white bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 transition-all shadow-md shadow-blue-500/25 flex items-center gap-1.5 border border-blue-400/30 group"
+                className="px-4 py-2 text-xs font-bold rounded-xl text-white bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 transition-all shadow-md shadow-blue-500/25 flex items-center gap-1.5 border border-blue-400/30 group active:scale-95"
               >
                 <Globe className="w-3.5 h-3.5 text-blue-200 group-hover:rotate-12 transition-transform" />
                 <span>Launch Main App</span>
@@ -170,12 +181,34 @@ export default function Navbar() {
               </a>
 
               <a
-                href="#about"
+                href="#how-it-works"
                 onClick={() => setMobileMenuOpen(false)}
                 className="p-3 rounded-2xl bg-white/[0.05] hover:bg-white/[0.1] active:bg-blue-600/20 border border-white/10 flex items-center gap-2.5 transition-colors text-slate-200"
               >
                 <div className="w-7 h-7 rounded-lg bg-indigo-500/20 border border-indigo-400/30 flex items-center justify-center shrink-0">
-                  <Info className="w-3.5 h-3.5 text-indigo-400" />
+                  <Sparkles className="w-3.5 h-3.5 text-indigo-400" />
+                </div>
+                <span>How It Works</span>
+              </a>
+
+              <a
+                href="#features"
+                onClick={() => setMobileMenuOpen(false)}
+                className="p-3 rounded-2xl bg-white/[0.05] hover:bg-white/[0.1] active:bg-blue-600/20 border border-white/10 flex items-center gap-2.5 transition-colors text-slate-200"
+              >
+                <div className="w-7 h-7 rounded-lg bg-purple-500/20 border border-purple-400/30 flex items-center justify-center shrink-0">
+                  <Layers className="w-3.5 h-3.5 text-purple-400" />
+                </div>
+                <span>Features</span>
+              </a>
+
+              <a
+                href="#about"
+                onClick={() => setMobileMenuOpen(false)}
+                className="p-3 rounded-2xl bg-white/[0.05] hover:bg-white/[0.1] active:bg-blue-600/20 border border-white/10 flex items-center gap-2.5 transition-colors text-slate-200"
+              >
+                <div className="w-7 h-7 rounded-lg bg-emerald-500/20 border border-emerald-400/30 flex items-center justify-center shrink-0">
+                  <Info className="w-3.5 h-3.5 text-emerald-400" />
                 </div>
                 <span>About Resvor</span>
               </a>

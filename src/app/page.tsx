@@ -4,7 +4,11 @@ import React from "react";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import HeroSection from "@/components/hero/HeroSection";
+import HowItWorksSection from "@/components/workflow/HowItWorksSection";
 import AboutSection from "@/components/about/AboutSection";
+import FeatureHighlights from "@/components/features/FeatureHighlights";
+import FaqSection from "@/components/faq/FaqSection";
+import BottomCtaSection from "@/components/cta/BottomCtaSection";
 
 export default function Home() {
   return (
@@ -16,11 +20,23 @@ export default function Home() {
         {/* 1. First View: Hero Section with All 3 Web Apps Links */}
         <HeroSection />
 
-        {/* 2. Simple Section About Resvor */}
+        {/* 2. Unified 3-Step Flow: How the Ecosystem Connects */}
+        <HowItWorksSection />
+
+        {/* 3. About Section: Built for Premier Nightlife & Lounges */}
         <AboutSection />
+
+        {/* 4. Core Feature Highlights: Bento Cards */}
+        <FeatureHighlights />
+
+        {/* 5. Frequently Asked Questions Accordion */}
+        <FaqSection />
+
+        {/* 6. Closing Call to Action Banner */}
+        <BottomCtaSection />
       </main>
 
-      {/* Global Footer in Light Mode */}
+      {/* Global Dark Footer */}
       <Footer />
     </div>
   );

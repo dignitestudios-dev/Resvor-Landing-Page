@@ -50,7 +50,7 @@ export default function Footer() {
                   >
                     <span className="flex items-center gap-2">
                       <Globe className="w-4 h-4 text-blue-400 group-hover:rotate-12 transition-transform" />
-                      <span>Main Platform</span>
+                      <span>Main Platform (resvor.com)</span>
                     </span>
                     <ArrowUpRight className="w-3.5 h-3.5 text-slate-500 group-hover:text-blue-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
                   </a>
@@ -64,7 +64,7 @@ export default function Footer() {
                   >
                     <span className="flex items-center gap-2">
                       <Users className="w-4 h-4 text-indigo-400 group-hover:scale-110 transition-transform" />
-                      <span>Workforce Portal</span>
+                      <span>Workforce Portal (workforce.resvor.com)</span>
                     </span>
                     <ArrowUpRight className="w-3.5 h-3.5 text-slate-500 group-hover:text-indigo-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
                   </a>
@@ -78,7 +78,7 @@ export default function Footer() {
                   >
                     <span className="flex items-center gap-2">
                       <Ticket className="w-4 h-4 text-purple-400 group-hover:-rotate-12 transition-transform" />
-                      <span>Promoter Portal</span>
+                      <span>Promoter Portal (promoter.resvor.com)</span>
                     </span>
                     <ArrowUpRight className="w-3.5 h-3.5 text-slate-500 group-hover:text-purple-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
                   </a>
@@ -88,11 +88,21 @@ export default function Footer() {
 
             {/* Quick Navigation & Contact */}
             <div className="space-y-3">
-              <h4 className="text-xs font-bold uppercase tracking-wider text-white">Contact & Info</h4>
-              <ul className="space-y-3 text-xs">
+              <h4 className="text-xs font-bold uppercase tracking-wider text-white">Platform Navigation</h4>
+              <ul className="space-y-2.5 text-xs">
                 <li>
                   <a href="#web-apps" className="text-slate-300 hover:text-white transition-colors">
                     Web Applications
+                  </a>
+                </li>
+                <li>
+                  <a href="#how-it-works" className="text-slate-300 hover:text-white transition-colors">
+                    How It Works
+                  </a>
+                </li>
+                <li>
+                  <a href="#features" className="text-slate-300 hover:text-white transition-colors">
+                    Platform Features
                   </a>
                 </li>
                 <li>
@@ -101,6 +111,11 @@ export default function Footer() {
                   </a>
                 </li>
                 <li>
+                  <a href="#faq" className="text-slate-300 hover:text-white transition-colors">
+                    Frequently Asked Questions
+                  </a>
+                </li>
+                <li className="pt-1">
                   <a href="mailto:support@lladner.com" className="text-blue-400 hover:text-blue-300 font-medium transition-colors font-mono">
                     support@lladner.com
                   </a>

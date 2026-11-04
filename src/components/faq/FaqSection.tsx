@@ -1,109 +1,126 @@
 "use client";
 
 import React, { useState } from "react";
-import { FAQ_ITEMS } from "@/data/testimonialsData";
-import { ChevronDown, HelpCircle, Shield, FileText, Mail } from "lucide-react";
+import { HelpCircle, ChevronDown, Mail } from "lucide-react";
+import ScrollReveal from "@/components/ui/ScrollReveal";
+
+interface FaqItem {
+  question: string;
+  answer: string;
+}
+
+const FAQS: FaqItem[] = [
+  {
+    question: "What are the three Resvor web applications?",
+    answer:
+      "Resvor unifies three dedicated platforms: the Main Platform (resvor.com) for patrons to discover lounges and book VIP tables, the Workforce Portal (workforce.resvor.com) for floor managers and door hosts to manage live operations, and the Promoter Portal (promoter.resvor.com) for event coordinators and DJs to manage guest list allotments.",
+  },
+  {
+    question: "Do guests or staff need to install an app from an app store?",
+    answer:
+      "No. All three Resvor portals are 100% web applications. They run seamlessly in any modern browser across iOS, Android, tablets, and desktop computers with zero downloads or hardware requirements.",
+  },
+  {
+    question: "How can our venue or lounge get started with Resvor?",
+    answer:
+      "You can contact our team directly at support@lladner.com. We will guide you through setting up your venue profile, workforce accounts, and promoter access.",
+  },
+  {
+    question: "Can promoters coordinate multiple nightlife events?",
+    answer:
+      "Yes. The Promoter Portal enables nightlife promoters and event curators to manage guest list allotments, track real-time attendee arrivals, and coordinate across multiple scheduled events.",
+  },
+];
 
 export default function FaqSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
-  const [selectedCategory, setSelectedCategory] = useState<string>("All");
 
-  const categories = ["All", "Security & Payments", "Events & Booking", "Guest CRM", "Setup & Onboarding"];
-
-  const filteredFaqs = FAQ_ITEMS.filter(
-    (item) => selectedCategory === "All" || item.category === selectedCategory
-  );
+  const toggleIndex = (idx: number) => {
+    setOpenIndex(openIndex === idx ? null : idx);
+  };
 
   return (
-    <section id="faq" className="py-24 bg-slate-50 text-slate-900 relative overflow-hidden border-t border-slate-200">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Header */}
-        <div className="text-center max-w-2xl mx-auto mb-14 space-y-3">
-          <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200/80 text-blue-700 text-xs font-semibold uppercase tracking-wider">
-            <HelpCircle className="w-3.5 h-3.5" />
-            <span>Frequently Asked Questions</span>
+    <section id="faq" className="py-20 sm:py-28 bg-white border-b border-slate-200/80 relative overflow-hidden">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-14">
+        {/* Section Header */}
+        <ScrollReveal delay={100} duration={750}>
+          <div className="text-center max-w-2xl mx-auto space-y-4">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-semibold uppercase tracking-wider">
+              <HelpCircle className="w-3.5 h-3.5 text-blue-600" />
+              <span>Questions & Answers</span>
+            </div>
+
+            <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-slate-950 leading-tight">
+              Frequently Asked Questions.
+            </h2>
+
+            <p className="text-base sm:text-lg text-slate-600 leading-relaxed font-normal">
+              Quick answers about the Resvor web ecosystem and how it works for patrons, workforce, and promoters.
+            </p>
           </div>
+        </ScrollReveal>
 
-          <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-slate-950 leading-tight">
-            Architecture & Operations FAQ
-          </h2>
-
-          <p className="text-base sm:text-lg text-slate-600 leading-relaxed font-normal">
-            Detailed technical and operational answers for lounge general managers, hospitality groups, and IT directors.
-          </p>
-
-          {/* Category Filter Chips */}
-          <div className="flex flex-wrap justify-center gap-2 pt-4">
-            {categories.map((cat) => (
-              <button
-                key={cat}
-                onClick={() => setSelectedCategory(cat)}
-                className={`px-3.5 py-1.5 rounded-xl text-xs font-medium transition-all cursor-pointer ${
-                  selectedCategory === cat
-                    ? "bg-blue-600 text-white font-bold shadow-md shadow-blue-600/25"
-                    : "bg-white text-slate-700 hover:text-slate-900 border border-slate-200 hover:border-slate-300 shadow-sm"
-                }`}
-              >
-                {cat}
-              </button>
-            ))}
-          </div>
-        </div>
-
-        {/* FAQ Accordion List */}
+        {/* Accordion List */}
         <div className="space-y-3.5">
-          {filteredFaqs.map((faq, idx) => {
+          {FAQS.map((faq, idx) => {
             const isOpen = openIndex === idx;
             return (
-              <div
-                key={idx}
-                className="rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-md transition-all overflow-hidden"
-              >
-                <button
-                  onClick={() => setOpenIndex(isOpen ? null : idx)}
-                  className="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 cursor-pointer hover:bg-slate-50/70 transition-colors"
-                  aria-expanded={isOpen}
+              <ScrollReveal key={idx} delay={150 + idx * 80} duration={700}>
+                <div
+                  className={`rounded-2xl border transition-all duration-300 overflow-hidden ${
+                    isOpen
+                      ? "bg-slate-50 border-blue-300 shadow-md"
+                      : "bg-white border-slate-200/90 hover:border-slate-300 shadow-xs"
+                  }`}
                 >
-                  <span className="text-sm sm:text-base font-bold text-slate-900 flex items-center gap-3">
-                    <span className="text-xs text-blue-600 font-mono font-semibold">0{idx + 1}.</span>
-                    {faq.question}
-                  </span>
-                  <ChevronDown
-                    className={`w-4 h-4 text-blue-600 shrink-0 transition-transform duration-200 ${
-                      isOpen ? "rotate-180" : ""
-                    }`}
-                  />
-                </button>
-
-                {isOpen && (
-                  <div className="px-5 sm:px-6 pb-6 pt-2 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 bg-slate-50/50">
-                    <p className="mb-3">{faq.answer}</p>
-                    <span className="text-[10px] text-blue-700 font-semibold uppercase tracking-wider bg-blue-50 px-2 py-0.5 rounded border border-blue-200">
-                      Category: {faq.category}
+                  <button
+                    type="button"
+                    onClick={() => toggleIndex(idx)}
+                    className="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 cursor-pointer focus:outline-none"
+                    aria-expanded={isOpen}
+                  >
+                    <span className="font-bold text-base sm:text-lg text-slate-950">
+                      {faq.question}
                     </span>
+                    <div
+                      className={`w-8 h-8 rounded-xl flex items-center justify-center shrink-0 transition-transform duration-300 ${
+                        isOpen ? "rotate-180 bg-blue-600 text-white" : "bg-slate-100 text-slate-500"
+                      }`}
+                    >
+                      <ChevronDown className="w-4 h-4" />
+                    </div>
+                  </button>
+
+                  <div
+                    className={`transition-all duration-300 ease-in-out px-5 sm:px-6 overflow-hidden ${
+                      isOpen ? "max-h-96 pb-6 opacity-100" : "max-h-0 pb-0 opacity-0"
+                    }`}
+                  >
+                    <p className="text-sm text-slate-600 leading-relaxed pt-2 border-t border-slate-200/60">
+                      {faq.answer}
+                    </p>
                   </div>
-                )}
-              </div>
+                </div>
+              </ScrollReveal>
             );
           })}
         </div>
 
-        {/* Additional help footer */}
-        <div className="mt-12 p-6 sm:p-8 rounded-3xl bg-white border border-slate-200 shadow-lg text-center space-y-2">
-          <h4 className="text-base font-bold text-slate-900">Have a specific architectural inquiry?</h4>
-          <p className="text-xs sm:text-sm text-slate-600 max-w-xl mx-auto">
-            Our platform engineering and hospitality teams are available to discuss enterprise rollouts, multi-location deployments, and security specifications.
-          </p>
-          <div className="pt-2">
-            <a
-              href="mailto:inquiries@resvor.com?subject=Resvor%20Platform%20Architecture%20Inquiry"
-              className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-blue-600 hover:text-blue-700 underline"
-            >
-              <Mail className="w-3.5 h-3.5" />
-              <span>Contact Resvor Engineering & Inquiries</span>
-            </a>
+        {/* Still have questions banner */}
+        <ScrollReveal delay={250} duration={750}>
+          <div className="text-center pt-4">
+            <p className="text-xs sm:text-sm text-slate-500">
+              Have additional questions?{" "}
+              <a
+                href="mailto:support@lladner.com"
+                className="font-semibold text-blue-600 hover:text-blue-700 underline inline-flex items-center gap-1"
+              >
+                <Mail className="w-3.5 h-3.5" />
+                <span>Contact our support team</span>
+              </a>
+            </p>
           </div>
-        </div>
+        </ScrollReveal>
       </div>
     </section>
   );
