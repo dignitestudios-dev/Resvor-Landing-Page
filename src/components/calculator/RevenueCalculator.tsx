@@ -17,7 +17,7 @@ export default function RevenueCalculator({ onOpenDemo }: RevenueCalculatorProps
   const monthlyTurns = weeklyTurns * 4.33;
   const baselineMonthlyGross = monthlyTurns * avgSpend;
 
-  // Resvor deposit locking eliminates ~15% table no-show losses
+  // ResVor deposit locking eliminates ~15% table no-show losses
   const noShowRecovered = baselineMonthlyGross * 0.15;
 
   // Automated Birthday & occasion retargeting drives ~12% additional high-margin table bookings

@@ -55,7 +55,7 @@ export default function DemoModal({ isOpen, onClose }: DemoModalProps) {
                 Schedule a 1-on-1 Platform Tour
               </h3>
               <p className="text-xs text-blue-200/80">
-                See how Resvor simplifies guest CRM, eliminates table no-shows, and automates birthday marketing for your lounge.
+                See how ResVor simplifies guest CRM, eliminates table no-shows, and automates birthday marketing for your lounge.
               </p>
             </div>
 

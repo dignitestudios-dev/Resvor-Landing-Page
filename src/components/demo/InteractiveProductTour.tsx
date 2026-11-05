@@ -25,11 +25,11 @@ export default function InteractiveProductTour() {
           </div>
 
           <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-white">
-            Explore the Resvor Web Application
+            Explore the ResVor Web Application
           </h2>
 
           <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
-            See how the Resvor web application looks and operates in everyday nightlife hospitality. Select any of the 4 web app modules below to explore the Guest CRM, dual-view calendar, and automated campaign engines.
+            See how the ResVor web application looks and operates in everyday nightlife hospitality. Select any of the 4 web app modules below to explore the Guest CRM, dual-view calendar, and automated campaign engines.
           </p>
         </div>
 

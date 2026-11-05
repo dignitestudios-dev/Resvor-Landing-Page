@@ -36,7 +36,7 @@ export default function LoungeCard({ venue }: LoungeCardProps) {
 
             <span className="px-3 py-1 rounded-full bg-blue-600/90 text-white text-[11px] font-bold shadow flex items-center gap-1.5 border border-blue-400/30">
               <ShieldCheck className="w-3.5 h-3.5 text-blue-200" />
-              Resvor Verified
+              ResVor Verified
             </span>
           </div>
 
@@ -123,7 +123,7 @@ export default function LoungeCard({ venue }: LoungeCardProps) {
             <div className="space-y-5">
               <div className="space-y-1">
                 <div className="inline-flex items-center gap-1.5 text-[10px] uppercase font-bold tracking-wider text-blue-400 px-2 py-0.5 rounded bg-blue-500/10 border border-blue-500/20">
-                  Resvor Venue Showcase Profile
+                  ResVor Venue Showcase Profile
                 </div>
                 <h3 className="text-2xl font-bold text-white">{venue.name}</h3>
                 <p className="text-xs text-slate-400 flex items-center gap-1.5">
@@ -144,7 +144,7 @@ export default function LoungeCard({ venue }: LoungeCardProps) {
 
               {/* Description */}
               <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
-                {venue.tagline} Powered by Resvor’s direct guest profiling and table management web application.
+                {venue.tagline} Powered by ResVor’s direct guest profiling and table management web application.
               </p>
 
               {/* Operational Specifications */}

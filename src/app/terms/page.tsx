@@ -6,8 +6,8 @@ import { ArrowLeft, ShieldCheck, FileText, Scale, Clock, AlertCircle } from "luc
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Terms and Conditions | Resvor",
-  description: "Terms and Conditions governing the use of the Resvor specialized web application platform for lounge and nightlife venue operations.",
+  title: "Terms and Conditions | ResVor",
+  description: "Terms and Conditions governing the use of the ResVor specialized web application platform for lounge and nightlife venue operations.",
 };
 
 export default function TermsPage() {
@@ -75,7 +75,7 @@ export default function TermsPage() {
                 Acceptance of Terms
               </h2>
               <p>
-                By accessing, browsing, or utilizing the Resvor web application, administrative dashboards, service listing portals, or API endpoints (collectively, the &ldquo;Platform&rdquo;), you acknowledge that you have read, understood, and agree to be bound by these Terms and Conditions (&ldquo;Terms&rdquo;). If you are entering into these Terms on behalf of a hospitality group, cocktail lounge, speakeasy, or nightlife entity, you represent and warrant that you possess full corporate authority to bind that entity.
+                By accessing, browsing, or utilizing the ResVor web application, administrative dashboards, service listing portals, or API endpoints (collectively, the &ldquo;Platform&rdquo;), you acknowledge that you have read, understood, and agree to be bound by these Terms and Conditions (&ldquo;Terms&rdquo;). If you are entering into these Terms on behalf of a hospitality group, cocktail lounge, speakeasy, or nightlife entity, you represent and warrant that you possess full corporate authority to bind that entity.
               </p>
             </section>
 
@@ -86,7 +86,7 @@ export default function TermsPage() {
                 Platform License & Scope of Service
               </h2>
               <p>
-                Resvor grants enrolled lounge operators and verified venue personnel a non-exclusive, non-transferable, revocable license to access and use the Platform solely for internal hospitality management, guest profiling, dual-view calendar/list scheduling, service package listings, and marketing campaign automation.
+                ResVor grants enrolled lounge operators and verified venue personnel a non-exclusive, non-transferable, revocable license to access and use the Platform solely for internal hospitality management, guest profiling, dual-view calendar/list scheduling, service package listings, and marketing campaign automation.
               </p>
               <ul className="list-disc pl-5 space-y-1 text-xs text-slate-400">
                 <li>You agree not to reverse engineer, decompile, or extract the underlying source code of the web application.</li>
@@ -102,7 +102,7 @@ export default function TermsPage() {
                 Account Security & Role Credentials
               </h2>
               <p>
-                Venue operators are solely responsible for maintaining the confidentiality of administrative credentials, host stand accounts, and multi-factor authentication (MFA) mechanisms. You agree to immediately notify Resvor of any unauthorized access, compromised passwords, or suspicious security events.
+                Venue operators are solely responsible for maintaining the confidentiality of administrative credentials, host stand accounts, and multi-factor authentication (MFA) mechanisms. You agree to immediately notify ResVor of any unauthorized access, compromised passwords, or suspicious security events.
               </p>
             </section>
 
@@ -116,7 +116,7 @@ export default function TermsPage() {
                 All guest deposits, bottle service checkouts, and ticketing transactions conducted through the Platform are processed using certified third-party payment gateways operating under PCI-DSS Level 1 compliance.
               </p>
               <p className="text-xs text-slate-400">
-                Crucially, Resvor does not store raw credit card numbers, CVVs, or unencrypted payment tokens on its primary operational database. Venue operators acknowledge that cancellation policies, minimum spend enforcement, and guest refunds are determined independently by venue management in accordance with local regulations.
+                Crucially, ResVor does not store raw credit card numbers, CVVs, or unencrypted payment tokens on its primary operational database. Venue operators acknowledge that cancellation policies, minimum spend enforcement, and guest refunds are determined independently by venue management in accordance with local regulations.
               </p>
             </section>
 
@@ -127,7 +127,7 @@ export default function TermsPage() {
                 Patron Data Ownership & Portability
               </h2>
               <p>
-                Venues retain 100% proprietary ownership over patron dossiers, customer contact records, transaction histories, and custom attributes uploaded to the Guest Book CRM. Resvor claims no ownership over venue guest data. Operators may export full or segmented guest rosters in standard CSV format at any time.
+                Venues retain 100% proprietary ownership over patron dossiers, customer contact records, transaction histories, and custom attributes uploaded to the Guest Book CRM. ResVor claims no ownership over venue guest data. Operators may export full or segmented guest rosters in standard CSV format at any time.
               </p>
             </section>
 
@@ -138,7 +138,7 @@ export default function TermsPage() {
                 Limitation of Liability & SLA
               </h2>
               <p>
-                While Resvor targets a 99.95% enterprise uptime service level, the Platform is provided on an &ldquo;as is&rdquo; and &ldquo;as available&rdquo; basis. In no event shall Resvor Technologies Inc. be liable for indirect, incidental, punitive, or consequential damages resulting from internet interruptions, local venue network outages, or unauthorized third-party access outside our direct control.
+                While ResVor targets a 99.95% enterprise uptime service level, the Platform is provided on an &ldquo;as is&rdquo; and &ldquo;as available&rdquo; basis. In no event shall ResVor Technologies Inc. be liable for indirect, incidental, punitive, or consequential damages resulting from internet interruptions, local venue network outages, or unauthorized third-party access outside our direct control.
               </p>
             </section>
 
@@ -149,7 +149,7 @@ export default function TermsPage() {
                 Modifications & Contact
               </h2>
               <p>
-                Resvor reserves the right to amend these Terms from time to time. Operators will be provided notice of material modifications via the administrative web portal or registered executive email.
+                ResVor reserves the right to amend these Terms from time to time. Operators will be provided notice of material modifications via the administrative web portal or registered executive email.
               </p>
               <div className="pt-2 text-xs text-blue-300">
                 For questions regarding these terms, contact:{" "}

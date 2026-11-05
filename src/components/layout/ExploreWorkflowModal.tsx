@@ -32,7 +32,7 @@ interface PlatformLink {
 
 const PLATFORM_LINKS: PlatformLink[] = [
   {
-    title: "Resvor Main Platform",
+    title: "ResVor Main Platform",
     badge: "Patron & Venue Experience",
     url: "https://www.resvor.com/",
     displayUrl: "www.resvor.com",
@@ -42,7 +42,7 @@ const PLATFORM_LINKS: PlatformLink[] = [
     buttonLabel: "Visit Main Platform",
   },
   {
-    title: "Resvor Workforce Portal",
+    title: "ResVor Workforce Portal",
     badge: "Staff & Floor Operations",
     url: "https://workforce.resvor.com/",
     displayUrl: "workforce.resvor.com",
@@ -52,7 +52,7 @@ const PLATFORM_LINKS: PlatformLink[] = [
     buttonLabel: "Visit Workforce Portal",
   },
   {
-    title: "Resvor Promoter Portal",
+    title: "ResVor Promoter Portal",
     badge: "Event & Promoter Hub",
     url: "https://promoter.resvor.com/",
     displayUrl: "promoter.resvor.com",
@@ -100,10 +100,10 @@ export default function ExploreWorkflowModal({ isOpen, onClose }: ExploreWorkflo
           <div className="space-y-1.5">
             {/* <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-500/20 border border-blue-400/30 text-blue-300 text-[11px] font-semibold uppercase tracking-wider">
               <Sparkles className="w-3.5 h-3.5 text-amber-300" />
-              <span>Resvor Web Ecosystem</span>
+              <span>ResVor Web Ecosystem</span>
             </div> */}
             <h3 className="text-xl sm:text-2xl font-extrabold text-white">
-              Explore the Resvor Network
+              Explore the ResVor Network
             </h3>
             <p className="text-xs sm:text-sm text-slate-300 leading-relaxed max-w-lg">
               Visit our live web platforms engineered specifically for patrons, venue workforce, and nightlife event promoters.
@@ -170,7 +170,7 @@ export default function ExploreWorkflowModal({ isOpen, onClose }: ExploreWorkflo
         <div className="pt-4 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-400">
           <div className="flex items-center gap-2">
             <ShieldCheck className="w-4 h-4 text-emerald-400" />
-            <span>Official Resvor Verified Domains</span>
+            <span>Official ResVor Verified Domains</span>
           </div>
 
           <a

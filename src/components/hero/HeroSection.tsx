@@ -44,7 +44,7 @@ export default function HeroSection() {
           >
             <Image
               src="/resvor-logo.png"
-              alt="Resvor - Plan Better. Party Smarter."
+              alt="ResVor - Plan Better. Party Smarter."
               width={260}
               height={70}
               className="h-14 sm:h-20 w-auto object-contain"
@@ -75,7 +75,7 @@ export default function HeroSection() {
 
         {/* Hero Subtitle Explaining Purpose Clearly */}
         <p className="text-base sm:text-xl text-slate-300 max-w-3xl mx-auto mb-10 leading-relaxed font-normal">
-          Resvor replaces fragmented spreadsheets and daytime restaurant reservation tools with an all-in-one web platform engineered for premier cocktail lounges, speakeasies, and rooftops.{" "}
+          ResVor replaces fragmented spreadsheets and daytime restaurant reservation tools with an all-in-one web platform engineered for premier cocktail lounges, speakeasies, and rooftops.{" "}
           <span className="text-white font-semibold">Unify your guest memory</span>,{" "}
           <span className="text-white font-semibold">eliminate table no-shows with direct card deposits</span>, and{" "}
           <span className="text-white font-semibold">control high-tempo floor logistics</span> with zero card storage liability.
@@ -97,7 +97,7 @@ export default function HeroSection() {
             className="w-full sm:w-auto px-8 py-4 rounded-2xl bg-slate-900/80 hover:bg-slate-800 text-slate-200 hover:text-white font-semibold text-sm border border-white/15 hover:border-blue-400/40 shadow-lg flex items-center justify-center gap-2 transition-all cursor-pointer"
           >
             <Target className="w-4 h-4 text-blue-400" />
-            <span>Why Lounges Need Resvor</span>
+            <span>Why Lounges Need ResVor</span>
           </a>
         </div>
 

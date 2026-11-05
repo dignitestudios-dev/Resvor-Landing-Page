@@ -45,7 +45,7 @@ export default function AboutSection() {
           <div className="lg:col-span-7 space-y-6">
             <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200/80 text-blue-700 text-xs font-semibold uppercase tracking-wider">
               <Building className="w-3.5 h-3.5" />
-              <span>The Purpose of Resvor</span>
+              <span>The Purpose of ResVor</span>
             </div>
 
             <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-slate-950 leading-tight">
@@ -53,7 +53,7 @@ export default function AboutSection() {
             </h2>
 
             <p className="text-base sm:text-lg text-slate-600 leading-relaxed font-normal">
-              Standard restaurant reservation software was engineered for quiet family diners, not high-volume cocktail lounges, subterranean speakeasies, or packed rooftop clubs. Resvor was built to eliminate the 4 critical failure points that drain lounge profits:
+              Standard restaurant reservation software was engineered for quiet family diners, not high-volume cocktail lounges, subterranean speakeasies, or packed rooftop clubs. ResVor was built to eliminate the 4 critical failure points that drain lounge profits:
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
@@ -70,7 +70,7 @@ export default function AboutSection() {
               <div className="p-5 rounded-2xl bg-blue-50/70 border border-blue-200/80 space-y-2 shadow-sm">
                 <div className="flex items-center gap-2 text-blue-950 font-bold text-sm">
                   <Sparkles className="w-4 h-4 text-blue-600" />
-                  <span>The Resvor Solution</span>
+                  <span>The ResVor Solution</span>
                 </div>
                 <p className="text-xs text-slate-700 leading-relaxed">
                   An autonomous web application unifying a searchable Guest Book, dual calendar-list scheduling, direct tokenized deposits, and automated SMS campaigns.
@@ -101,7 +101,7 @@ export default function AboutSection() {
               >
                 <Image
                   src="/resvor-logo.png"
-                  alt="Resvor Brand"
+                  alt="ResVor Brand"
                   width={200}
                   height={56}
                   className="h-12 sm:h-14 w-auto object-contain"
@@ -149,7 +149,7 @@ export default function AboutSection() {
               Why Lounges Are Moving Away from Generic Reservation Tools
             </h3>
             <p className="text-sm text-slate-600">
-              See the exact difference between patchwork spreadsheets & generic restaurant apps versus Resvor&apos;s purpose-built web platform.
+              See the exact difference between patchwork spreadsheets & generic restaurant apps versus ResVor&apos;s purpose-built web platform.
             </p>
           </div>
 
@@ -182,11 +182,11 @@ export default function AboutSection() {
                     </p>
                   </div>
 
-                  {/* Resvor Advantage */}
+                  {/* ResVor Advantage */}
                   <div className="p-4 rounded-xl bg-emerald-50/70 border border-emerald-200/80 space-y-2">
                     <div className="flex items-center gap-1.5 text-emerald-800 font-bold text-[11px] uppercase tracking-wider">
                       <CheckCircle2 className="w-3.5 h-3.5 shrink-0" />
-                      <span>With Resvor Web App</span>
+                      <span>With ResVor Web App</span>
                     </div>
                     <p className="text-slate-800 leading-relaxed text-xs">
                       {c.resvor}

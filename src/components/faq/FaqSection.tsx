@@ -96,11 +96,11 @@ export default function FaqSection() {
           </p>
           <div className="pt-2">
             <a
-              href="mailto:inquiries@resvor.com?subject=Resvor%20Platform%20Architecture%20Inquiry"
+              href="mailto:inquiries@resvor.com?subject=ResVor%20Platform%20Architecture%20Inquiry"
               className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-blue-600 hover:text-blue-700 underline"
             >
               <Mail className="w-3.5 h-3.5" />
-              <span>Contact Resvor Engineering & Inquiries</span>
+              <span>Contact ResVor Engineering & Inquiries</span>
             </a>
           </div>
         </div>

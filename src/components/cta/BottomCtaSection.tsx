@@ -17,7 +17,7 @@ export default function BottomCtaSection() {
           >
             <Image
               src="/resvor-logo.png"
-              alt="Resvor - Plan Better. Party Smarter."
+              alt="ResVor - Plan Better. Party Smarter."
               width={260}
               height={70}
               className="h-14 sm:h-20 w-auto object-contain"
@@ -44,7 +44,7 @@ export default function BottomCtaSection() {
         {/* Informative Buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
           <a
-            href="mailto:inquiries@resvor.com?subject=Resvor%20Platform%20Inquiry"
+            href="mailto:inquiries@resvor.com?subject=ResVor%20Platform%20Inquiry"
             className="w-full sm:w-auto px-8 py-4 rounded-2xl bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-700 hover:from-blue-500 hover:to-indigo-500 text-white font-bold text-sm shadow-2xl shadow-blue-600/50 hover:shadow-blue-500/70 flex items-center justify-center gap-2.5 transition-all border border-blue-400/40 cursor-pointer"
           >
             <Mail className="w-4 h-4 text-blue-200" />

@@ -17,7 +17,7 @@ export default function Footer() {
             <Link href="/" className="relative inline-flex items-center" style={{ position: "relative" }}>
               <Image
                 src="/resvor-logo.png"
-                alt="Resvor"
+                alt="ResVor"
                 width={150}
                 height={40}
                 className="h-9 sm:h-10 w-auto object-contain object-left hover:opacity-90 transition-opacity"
@@ -180,7 +180,7 @@ export default function Footer() {
 
         {/* Bottom Legal Copyright */}
         <div className="mt-12 pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
-          <p>© 2026 Resvor Technologies Inc. All rights reserved. Specialized Web Application for Lounge & Nightlife Operations.</p>
+          <p>© 2026 ResVor Technologies Inc. All rights reserved. Specialized Web Application for Lounge & Nightlife Operations.</p>
           <div className="flex items-center gap-6">
             <Link href="/privacy" className="hover:text-slate-300 transition-colors">
               Privacy Policy

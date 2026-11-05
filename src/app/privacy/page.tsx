@@ -6,8 +6,8 @@ import { ArrowLeft, ShieldCheck, Lock, Eye, Clock, AlertCircle, Database, CheckC
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Resvor",
-  description: "Privacy Policy detailing how Resvor collects, protects, and handles operator and guest information across our nightlife management platform.",
+  title: "Privacy Policy | ResVor",
+  description: "Privacy Policy detailing how ResVor collects, protects, and handles operator and guest information across our nightlife management platform.",
 };
 
 export default function PrivacyPage() {
@@ -75,7 +75,7 @@ export default function PrivacyPage() {
                 Information We Collect
               </h2>
               <p>
-                Resvor collects necessary operational information to provide specialized nightlife hospitality management services, including:
+                ResVor collects necessary operational information to provide specialized nightlife hospitality management services, including:
               </p>
               <ul className="list-disc pl-5 space-y-1.5 text-xs text-slate-400">
                 <li><strong className="text-white">Operator Account Data:</strong> Full name, corporate email address, encrypted authentication hashes, venue roles, and contact phone numbers.</li>
@@ -94,11 +94,11 @@ export default function PrivacyPage() {
               <div className="p-3.5 rounded-xl bg-emerald-950/20 border border-emerald-500/20 text-xs text-emerald-200 flex items-start gap-2.5">
                 <Lock className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
                 <p className="text-slate-200 text-[11px] leading-relaxed">
-                  Resvor operates on a strict zero-card-liability architecture. When patrons submit table security deposits or purchase bottle service packages, card details are transmitted directly to PCI-DSS Level 1 compliant vaults via encrypted tokenization.
+                  ResVor operates on a strict zero-card-liability architecture. When patrons submit table security deposits or purchase bottle service packages, card details are transmitted directly to PCI-DSS Level 1 compliant vaults via encrypted tokenization.
                 </p>
               </div>
               <p className="text-xs text-slate-400 pt-1">
-                Raw 16-digit credit card numbers, CVVs, and magnetic stripe information are never received, stored, or processed on Resvor primary application servers.
+                Raw 16-digit credit card numbers, CVVs, and magnetic stripe information are never received, stored, or processed on ResVor primary application servers.
               </p>
             </section>
 
@@ -109,7 +109,7 @@ export default function PrivacyPage() {
                 How We Use Information
               </h2>
               <p>
-                Collected data is utilized strictly to deliver and enhance the Resvor operational experience:
+                Collected data is utilized strictly to deliver and enhance the ResVor operational experience:
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs pt-1">
                 <div className="p-3 rounded-xl bg-slate-800/40 border border-white/5 space-y-1">
@@ -138,7 +138,7 @@ export default function PrivacyPage() {
                 Data Sharing & Third-Party Vendors
               </h2>
               <p>
-                Resvor does not sell, lease, or monetize patron information to advertisers or data brokers. Information is shared only with verified infrastructure providers strictly required to operate the service:
+                ResVor does not sell, lease, or monetize patron information to advertisers or data brokers. Information is shared only with verified infrastructure providers strictly required to operate the service:
               </p>
               <ul className="list-disc pl-5 space-y-1 text-xs text-slate-400">
                 <li><strong className="text-white">Cloud Hosting & Database:</strong> Encrypted multi-zone cloud infrastructure providers.</li>

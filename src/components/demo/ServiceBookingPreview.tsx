@@ -34,7 +34,7 @@ export default function ServiceBookingPreview() {
         <div className="flex items-center gap-2 text-blue-200">
           <ShieldCheck className="w-5 h-5 text-emerald-400 shrink-0" />
           <span>
-            <strong className="text-white">Direct Guest Payment Architecture:</strong> Guests tokenize cards directly via PCI-DSS vaults. The venue and Resvor never store raw numbers.
+            <strong className="text-white">Direct Guest Payment Architecture:</strong> Guests tokenize cards directly via PCI-DSS vaults. The venue and ResVor never store raw numbers.
           </span>
         </div>
         <div className="px-2.5 py-1 rounded bg-slate-900 border border-white/10 text-[11px] font-mono text-emerald-400 font-bold shrink-0">

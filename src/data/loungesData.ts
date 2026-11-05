@@ -256,7 +256,7 @@ export const DEMO_EVENTS: LoungeEvent[] = [
     title: "Midnight Odyssey feat. Guest DJ Julian Cross",
     date: "Friday, Nov 13",
     time: "11:00 PM - 4:00 AM",
-    hostName: "Resvor Live Booking",
+    hostName: "ResVor Live Booking",
     eventType: "Guest DJ Night",
     attendeeLimit: 220,
     currentRsvp: 194,

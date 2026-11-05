@@ -20,7 +20,7 @@ export default function Home() {
         {/* 1. Hero Section: Purpose Awareness & Value Pillars */}
         <HeroSection />
 
-        {/* 2. Platform Purpose & Traditional vs Resvor Comparison */}
+        {/* 2. Platform Purpose & Traditional vs ResVor Comparison */}
         <AboutSection />
 
         {/* 3. The 4-Step Operating Workflow: How It Works */}

@@ -35,7 +35,7 @@ export default function Navbar() {
               <div className="relative flex items-center" style={{ position: "relative" }}>
                 <Image
                   src="/resvor-logo.png"
-                  alt="Resvor - Plan Better. Party Smarter."
+                  alt="ResVor - Plan Better. Party Smarter."
                   width={140}
                   height={38}
                   className="h-8 sm:h-9 w-auto object-contain object-left group-hover:opacity-90 transition-opacity"

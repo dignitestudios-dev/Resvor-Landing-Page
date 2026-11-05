@@ -19,7 +19,7 @@ export default function TestimonialsSection() {
           </h2>
 
           <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
-            From underground Manhattan speakeasies to multi-level South Beach megaclubs, see how Resvor transforms venue profitability.
+            From underground Manhattan speakeasies to multi-level South Beach megaclubs, see how ResVor transforms venue profitability.
           </p>
         </div>
 

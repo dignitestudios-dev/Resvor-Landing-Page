@@ -57,7 +57,7 @@ export default function FeaturedLounges() {
             </h2>
 
             <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
-              An architectural showcase of premier venues powered by Resvor. Explore how upscale rooftop terraces, subterranean speakeasies, and high-energy VIP clubs structure their digital profiles.
+              An architectural showcase of premier venues powered by ResVor. Explore how upscale rooftop terraces, subterranean speakeasies, and high-energy VIP clubs structure their digital profiles.
             </p>
           </div>
 
