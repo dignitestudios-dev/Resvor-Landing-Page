@@ -1,19 +1,19 @@
 @import "tailwindcss";
 
 :root {
-  --bg-dark-950: #030614;
-  --bg-dark-900: #060B26;
-  --bg-dark-850: #091136;
-  --bg-dark-800: #0C1647;
-  --accent-blue-500: #2563EB;
-  --accent-blue-400: #3B82F6;
-  --accent-blue-300: #60A5FA;
-  --accent-glow: rgba(37, 99, 235, 0.25);
+  --bg-light: #f8fafc;
+  --bg-surface: #ffffff;
+  --text-main: #0f172a;
+  --text-muted: #475569;
+  --accent-blue-600: #2563eb;
+  --accent-blue-500: #3b82f6;
+  --accent-blue-50: #eff6ff;
+  --border-light: #e2e8f0;
 }
 
 html, body {
-  background-color: #030614;
-  color: #e2e8f0;
+  background-color: #f8fafc;
+  color: #0f172a;
   font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   overflow-x: hidden;
 }
@@ -23,29 +23,28 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: -0.025em;
 }
 
-/* Luxury Nightlife Midnight Gradient - Saturated Royal Navy Blue at Top */
-.bg-lounge-gradient {
-  background: linear-gradient(180deg, #0b1854 0%, #0d1e63 25%, #060d2e 65%, #02040d 100%);
+/* Light Mode Ambient Radial & Hero Backgrounds */
+.bg-light-hero {
+  background: radial-gradient(circle at 50% -10%, rgba(219, 234, 254, 0.8) 0%, rgba(241, 245, 249, 0.6) 40%, #f8fafc 80%);
 }
 
-.bg-hero-radial {
-  background: radial-gradient(circle at 50% 0%, rgba(37, 99, 235, 0.45) 0%, rgba(13, 30, 99, 0.5) 40%, rgba(3, 6, 20, 0.95) 85%);
+.bg-light-hero-radial {
+  background: radial-gradient(circle at 50% 0%, rgba(37, 99, 235, 0.08) 0%, rgba(99, 102, 241, 0.04) 40%, transparent 75%);
 }
 
-.bg-glass-card {
-  background: rgba(10, 19, 58, 0.6);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+.bg-light-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
 }
 
-.bg-glass-card-hover:hover {
-  border-color: rgba(96, 165, 250, 0.4);
-  box-shadow: 0 10px 30px -10px rgba(37, 99, 235, 0.35);
+.bg-light-card-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.bg-light-lounge {
-  background: #f8fafc;
+.bg-light-card-hover:hover {
+  border-color: #93c5fd;
+  box-shadow: 0 20px 40px -15px rgba(37, 99, 235, 0.15);
+  transform: translateY(-4px);
 }
 
 /* Custom scrollbar */
@@ -54,34 +53,64 @@ h1, h2, h3, h4, h5, h6 {
   height: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #030614;
+  background: #f1f5f9;
 }
 ::-webkit-scrollbar-thumb {
-  background: #1e293b;
+  background: #cbd5e1;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #334155;
+  background: #94a3b8;
 }
 
-/* Glow effects */
-.glow-blue {
-  box-shadow: 0 0 35px -5px rgba(59, 130, 246, 0.35);
+/* Ambient glow breathing animation */
+@keyframes glowFloat {
+  0%, 100% {
+    transform: translate(-50%, 0) scale(1);
+    opacity: 0.22;
+  }
+  50% {
+    transform: translate(-50%, -18px) scale(1.08);
+    opacity: 0.32;
+  }
 }
 
-.glow-blue-subtle {
-  box-shadow: 0 0 20px -2px rgba(37, 99, 235, 0.2);
+.animate-glow-float {
+  animation: glowFloat 9s ease-in-out infinite;
 }
 
-.glow-gold {
-  box-shadow: 0 0 25px -4px rgba(245, 158, 11, 0.3);
+/* Subtle gentle floating animation */
+@keyframes floatGentle {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
 }
 
+.animate-float-gentle {
+  animation: floatGentle 7s ease-in-out infinite;
+}
+
+/* Smooth pulse */
 @keyframes pulseSubtle {
   0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.85; transform: scale(1.02); }
+  50% { opacity: 0.85; transform: scale(1.03); }
 }
 
 .animate-pulse-subtle {
   animation: pulseSubtle 4s ease-in-out infinite;
+}
+
+/* Shimmer beam effect */
+@keyframes shimmerBeam {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-shimmer-sweep {
+  transform: translateX(-100%);
+  animation: shimmerBeam 2.5s infinite;
 }

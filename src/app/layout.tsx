@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://resvor.com"),
   title: "ResVor | The Operating System for Premier Lounges & Nightlife",
   description:
-    "Transform how your lounge manages guest profiling, VIP table reservations, dual-interface event scheduling, and automated SMS/email marketing. Built for high-volume nightlife and hospitality.",
+    "The all-in-one web operating system for premier lounges, rooftops, and nightlife venues. Connect patrons, workforce operations, and promoter networks in one place.",
   keywords: [
     "lounge management software",
     "nightlife CRM",
@@ -14,6 +14,8 @@ export const metadata: Metadata = {
     "lounge guest book",
     "nightclub event management",
     "hospitality software",
+    "workforce portal",
+    "promoter portal",
   ],
   authors: [{ name: "ResVor Technologies" }],
   icons: {
@@ -29,7 +31,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "ResVor | Plan Better. Party Smarter.",
-    description: "Where every occasion finds its lounge. Comprehensive Guest Book, Dual Event Management, and VIP Table Reservations.",
+    description: "Where every occasion finds its lounge. Explore our 3 specialized web apps for patrons, workforce operations, and event promoters.",
     type: "website",
     images: [
       {
@@ -61,7 +63,7 @@ export default function RootLayout({
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon.png" />
       </head>
-      <body className="min-h-full bg-[#050816] text-slate-100 antialiased selection:bg-blue-600 selection:text-white font-sans">
+      <body className="min-h-full bg-slate-50 text-slate-900 antialiased selection:bg-blue-600 selection:text-white font-sans">
         {children}
       </body>
     </html>

@@ -3,204 +3,250 @@
 import React from "react";
 import Image from "next/image";
 import { 
-  Sparkles, 
-  ArrowRight, 
-  ShieldCheck, 
-  Layers, 
+  Globe, 
   Users, 
-  Calendar, 
-  CreditCard, 
-  ChevronRight,
-  Compass,
-  CheckCircle2,
-  Zap,
-  Target
+  Ticket, 
+  ArrowUpRight, 
+  CheckCircle2, 
+  Sparkles
 } from "lucide-react";
+import ScrollReveal from "@/components/ui/ScrollReveal";
+
+interface WebAppItem {
+  id: string;
+  name: string;
+  tagline: string;
+  role: string;
+  roleBadgeClass: string;
+  url: string;
+  displayUrl: string;
+  description: string;
+  features: string[];
+  icon: React.ReactNode;
+  iconBg: string;
+  buttonClass: string;
+  buttonText: string;
+  borderHover: string;
+  topAccent: string;
+  glowAccent: string;
+}
+
+const WEB_APPS: WebAppItem[] = [
+  {
+    id: "main-platform",
+    name: "ResVor Main Platform",
+    tagline: "Lounge Discovery & VIP Reservations",
+    role: "For Guests & Patrons",
+    roleBadgeClass: "bg-blue-50 text-blue-700 border-blue-200",
+    url: "https://www.resvor.com/",
+    displayUrl: "www.resvor.com",
+    description: "The primary web application for discovering premier cocktail lounges, booking VIP tables, and exploring curated nightlife venues.",
+    features: [
+      "Curated Nightlife Directory",
+      "VIP Table Reservations",
+      "Direct Online Booking"
+    ],
+    icon: <Globe className="w-6 h-6 text-blue-600 transition-transform duration-300 group-hover:rotate-12" />,
+    iconBg: "bg-blue-50 border-blue-200 group-hover:bg-blue-100/80",
+    buttonClass: "bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white shadow-blue-500/25 group-hover:shadow-blue-500/40",
+    buttonText: "Launch ResVor Platform",
+    borderHover: "hover:border-blue-400/80 hover:shadow-blue-500/15",
+    topAccent: "bg-gradient-to-r from-blue-500 via-indigo-500 to-blue-600",
+    glowAccent: "bg-blue-500/10",
+  },
+  {
+    id: "workforce-portal",
+    name: "ResVor Workforce Portal",
+    tagline: "Operations & Floor Management",
+    role: "For Venue Staff & GMs",
+    roleBadgeClass: "bg-indigo-50 text-indigo-700 border-indigo-200",
+    url: "https://workforce.resvor.com/",
+    displayUrl: "workforce.resvor.com",
+    description: "Operational terminal for general managers, hosts, and door staff to manage live capacity and streamline door check-ins.",
+    features: [
+      "Rapid Door Check-In",
+      "Live Floor Capacity Control",
+      "Centralized Venue Operations"
+    ],
+    icon: <Users className="w-6 h-6 text-indigo-600 transition-transform duration-300 group-hover:scale-110" />,
+    iconBg: "bg-indigo-50 border-indigo-200 group-hover:bg-indigo-100/80",
+    buttonClass: "bg-slate-900 hover:bg-slate-800 text-white shadow-slate-900/25 group-hover:shadow-slate-900/40",
+    buttonText: "Launch workforce portal",
+    borderHover: "hover:border-indigo-400/80 hover:shadow-indigo-500/15",
+    topAccent: "bg-gradient-to-r from-indigo-500 via-blue-500 to-indigo-600",
+    glowAccent: "bg-indigo-500/10",
+  },
+  {
+    id: "promoter-portal",
+    name: "ResVor Promoter Portal",
+    tagline: "Event Allotments & Door Tracking",
+    role: "For Promoters & DJs",
+    roleBadgeClass: "bg-purple-50 text-purple-700 border-purple-200",
+    url: "https://promoter.resvor.com/",
+    displayUrl: "promoter.resvor.com",
+    description: "Specialized hub for nightlife promoters and event curators to manage guest list allotments and track event attendance.",
+    features: [
+      "Guest List Allotment Tracker",
+      "Live Event Attendance Tally",
+      "Event Coordination Tools"
+    ],
+    icon: <Ticket className="w-6 h-6 text-purple-600 transition-transform duration-300 group-hover:-rotate-12" />,
+    iconBg: "bg-purple-50 border-purple-200 group-hover:bg-purple-100/80",
+    buttonClass: "bg-purple-600 hover:bg-purple-500 text-white shadow-purple-500/25 group-hover:shadow-purple-500/40",
+    buttonText: "Launch promoter portal",
+    borderHover: "hover:border-purple-400/80 hover:shadow-purple-500/15",
+    topAccent: "bg-gradient-to-r from-purple-500 via-pink-500 to-purple-600",
+    glowAccent: "bg-purple-500/10",
+  },
+];
 
 export default function HeroSection() {
   return (
-    <section className="relative pt-28 pb-20 sm:pt-36 sm:pb-28 overflow-hidden bg-lounge-gradient">
-      {/* Background ambient lighting and luxury mesh glow */}
-      <div className="absolute inset-0 bg-hero-radial pointer-events-none" />
-      <div className="absolute -top-10 left-1/2 -translate-x-1/2 w-[900px] h-[450px] bg-blue-500/30 rounded-full blur-[140px] pointer-events-none" />
-      <div className="absolute top-1/3 -left-32 w-96 h-96 bg-indigo-600/10 rounded-full blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-10 -right-32 w-96 h-96 bg-blue-500/10 rounded-full blur-[120px] pointer-events-none" />
+    <section className="relative pt-32 pb-20 sm:pt-40 sm:pb-28 overflow-hidden bg-gradient-to-b from-[#030614] via-[#081236] via-45% to-slate-50 border-b border-slate-200/80">
+      {/* Dynamic ambient floating lighting */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[480px] bg-blue-600/25 rounded-full blur-[140px] pointer-events-none animate-glow-float" />
+      <div className="absolute top-1/4 -left-32 w-80 h-80 bg-indigo-600/15 rounded-full blur-[120px] pointer-events-none animate-float-gentle" />
+      <div className="absolute top-1/4 -right-32 w-80 h-80 bg-blue-500/15 rounded-full blur-[120px] pointer-events-none animate-float-gentle" style={{ animationDelay: "2s" }} />
 
-      {/* Grid Pattern overlay */}
+      {/* Subtle Grid overlay at top */}
       <div
-        className="absolute inset-0 opacity-[0.03] pointer-events-none"
+        className="absolute inset-0 opacity-[0.04] pointer-events-none"
         style={{
           backgroundImage: `radial-gradient(circle at 1px 1px, #ffffff 1px, transparent 0)`,
-          backgroundSize: "40px 40px",
+          backgroundSize: "36px 36px",
         }}
       />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
-        {/* Official Brand Logo Presentation */}
-        <div className="flex justify-center mb-6">
-          <div
-            className="relative flex items-center justify-center drop-shadow-[0_10px_25px_rgba(37,99,235,0.35)]"
-            style={{ position: "relative" }}
-          >
-            <Image
-              src="/resvor-logo.png"
-              alt="ResVor - Plan Better. Party Smarter."
-              width={260}
-              height={70}
-              className="h-14 sm:h-20 w-auto object-contain"
-              priority
-            />
+        {/* Brand Logo Presentation with smooth reveal */}
+        <ScrollReveal delay={50} duration={700}>
+          <div className="flex justify-center mb-6">
+            <div className="relative flex items-center justify-center drop-shadow-[0_10px_30px_rgba(37,99,235,0.4)] hover:scale-105 transition-transform duration-300">
+              <Image
+                src="/resvor-logo.png"
+                alt="ResVor - Plan Better. Party Smarter."
+                width={260}
+                height={70}
+                className="h-14 sm:h-18 w-auto object-contain"
+                priority
+              />
+            </div>
           </div>
-        </div>
+        </ScrollReveal>
 
-        {/* Eyebrow Pill */}
-        {/* <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-950/80 border border-blue-400/30 text-blue-200 text-xs font-semibold mb-6 shadow-xl shadow-blue-950/60 backdrop-blur-md">
-          <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse" />
-          <span className="uppercase tracking-widest text-[11px] text-blue-300 font-bold">
-            The Purpose-Built Operating System for Nightlife & Lounges
-          </span>
-          <span className="text-white/30 hidden sm:inline">|</span>
-          <span className="text-slate-300 hidden sm:inline text-[11px]">
-            100% Web Application Platform
-          </span>
-        </div> */}
-
-        {/* Hero Title */}
-        <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white max-w-5xl mx-auto leading-[1.1] mb-6">
-          Where Every Occasion <br />
-          <span className="bg-gradient-to-r from-blue-300 via-blue-100 to-indigo-200 bg-clip-text text-transparent drop-shadow-sm">
-            Finds Its Lounge.
-          </span>
-        </h1>
-
-        {/* Hero Subtitle Explaining Purpose Clearly */}
-        <p className="text-base sm:text-xl text-slate-300 max-w-3xl mx-auto mb-10 leading-relaxed font-normal">
-          ResVor replaces fragmented spreadsheets and daytime restaurant reservation tools with an all-in-one web platform engineered for premier cocktail lounges, speakeasies, and rooftops.{" "}
-          <span className="text-white font-semibold">Unify your guest memory</span>,{" "}
-          <span className="text-white font-semibold">eliminate table no-shows with direct card deposits</span>, and{" "}
-          <span className="text-white font-semibold">control high-tempo floor logistics</span> with zero card storage liability.
-        </p>
-
-        {/* Navigation Action Buttons */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
-          <a
-            href="#how-it-works"
-            className="w-full sm:w-auto px-8 py-4 rounded-2xl bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-700 hover:from-blue-500 hover:to-indigo-500 text-white font-bold text-sm shadow-xl shadow-blue-600/40 hover:shadow-blue-500/60 flex items-center justify-center gap-2.5 transition-all border border-blue-400/40 cursor-pointer group"
-          >
-            <Zap className="w-4 h-4 text-blue-200 group-hover:scale-110 transition-transform" />
-            <span>See How It Works</span>
-            <ChevronRight className="w-4 h-4" />
-          </a>
-
-          <a
-            href="#about"
-            className="w-full sm:w-auto px-8 py-4 rounded-2xl bg-slate-900/80 hover:bg-slate-800 text-slate-200 hover:text-white font-semibold text-sm border border-white/15 hover:border-blue-400/40 shadow-lg flex items-center justify-center gap-2 transition-all cursor-pointer"
-          >
-            <Target className="w-4 h-4 text-blue-400" />
-            <span>Why Lounges Need ResVor</span>
-          </a>
-        </div>
-
-        {/* Quick Purpose & Awareness Strip */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-5xl mx-auto mb-16 text-left">
-          <div className="p-3.5 rounded-xl bg-slate-900/70 border border-white/10 backdrop-blur-md">
-            <span className="text-[10px] uppercase font-bold tracking-wider text-blue-400 block mb-1">
-              Who It Is Built For
+        {/* Eyebrow Pill in Dark Mode Styling */}
+        <ScrollReveal delay={150} duration={700}>
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-950/80 border border-blue-400/30 text-blue-200 text-xs font-semibold mb-6 shadow-xl shadow-blue-950/60 backdrop-blur-md hover:border-blue-300/50 transition-colors">
+            <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse" />
+            <span className="font-bold tracking-wide uppercase text-[11px] text-blue-300">
+              The Nightlife & Lounge Web Ecosystem
             </span>
-            <p className="text-xs font-semibold text-white">
-              Cocktail Lounges, Speakeasies & Rooftops
-            </p>
-          </div>
-
-          <div className="p-3.5 rounded-xl bg-slate-900/70 border border-white/10 backdrop-blur-md">
-            <span className="text-[10px] uppercase font-bold tracking-wider text-emerald-400 block mb-1">
-              Primary Purpose
+            <span className="text-white/30 hidden sm:inline">|</span>
+            <span className="text-slate-300 hidden sm:inline text-[11px] font-medium">
+              3 Connected Web Applications
             </span>
-            <p className="text-xs font-semibold text-white">
-              Stop No-Shows & Retain 100% Guest Spend
-            </p>
           </div>
+        </ScrollReveal>
 
-          <div className="p-3.5 rounded-xl bg-slate-900/70 border border-white/10 backdrop-blur-md">
-            <span className="text-[10px] uppercase font-bold tracking-wider text-indigo-400 block mb-1">
-              How Operators Run It
+        {/* Hero Title (Using current hero typography on dark shade) */}
+        <ScrollReveal delay={250} duration={800}>
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white max-w-5xl mx-auto leading-[1.08] mb-5">
+            Where Every Occasion <br />
+            <span className="bg-gradient-to-r from-blue-300 via-blue-100 to-indigo-200 bg-clip-text text-transparent drop-shadow-sm">
+              Finds Its Lounge.
             </span>
-            <p className="text-xs font-semibold text-white">
-              Dual Visual Calendar + Rapid Door List
-            </p>
-          </div>
+          </h1>
+        </ScrollReveal>
 
-          <div className="p-3.5 rounded-xl bg-slate-900/70 border border-white/10 backdrop-blur-md">
-            <span className="text-[10px] uppercase font-bold tracking-wider text-amber-400 block mb-1">
-              Financial Security
-            </span>
-            <p className="text-xs font-semibold text-white">
-              PCI-DSS Tokenized · 0% Raw Card Storage
-            </p>
-          </div>
-        </div>
+        {/* Hero Subtitle */}
+        <ScrollReveal delay={350} duration={800}>
+          <p className="text-base sm:text-xl text-slate-300 max-w-3xl mx-auto mb-12 sm:mb-14 leading-relaxed font-normal">
+            ResVor delivers a purpose-built web architecture connecting{" "}
+            <span className="text-white font-semibold">patrons</span>,{" "}
+            <span className="text-white font-semibold">venue workforce</span>, and{" "}
+            <span className="text-white font-semibold">event promoters</span>.{" "}
+            Select your portal below to enter the live platform:
+          </p>
+        </ScrollReveal>
 
-        {/* 4 Architectural Value Pillars */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-6xl mx-auto text-left">
-          {/* Card 1 */}
-          <div className="p-5 rounded-2xl bg-slate-900/60 backdrop-blur-xl border border-white/10 hover:border-blue-500/40 transition-all space-y-2.5">
-            <div className="w-10 h-10 rounded-xl bg-blue-600/20 border border-blue-400/30 flex items-center justify-center text-blue-400">
-              <Users className="w-5 h-5" />
-            </div>
-            <h4 className="text-sm font-bold text-white">Comprehensive Guest Book</h4>
-            <p className="text-xs text-slate-400 leading-relaxed">
-              Profiles with names, contact details, birth dates, photos, custom tags for anniversaries, and 1-click CSV data export.
-            </p>
-            <div className="text-[10px] text-blue-300 font-medium pt-1 border-t border-white/5 flex items-center justify-between">
-              <span>Patron CRM Ledger</span>
-              <span className="text-emerald-400 font-semibold">&lt; 15ms Search</span>
-            </div>
-          </div>
+        {/* FIRST VIEW: The 3 Web Apps Link Cards with Staggered Reveal */}
+        <div id="web-apps" className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto text-left">
+          {WEB_APPS.map((app, index) => (
+            <ScrollReveal
+              key={app.id}
+              delay={450 + index * 120}
+              duration={800}
+              className="h-full"
+            >
+              <div
+                className={`group relative h-full rounded-3xl bg-white border border-slate-200/90 shadow-lg hover:shadow-2xl transition-all duration-300 p-6 sm:p-7 flex flex-col justify-between overflow-hidden ${app.borderHover} hover:-translate-y-2`}
+              >
+                {/* Top Accent Gradient Line with Shimmer on Hover */}
+                <div className={`absolute top-0 left-0 right-0 h-1.5 ${app.topAccent}`} />
 
-          {/* Card 2 */}
-          <div className="p-5 rounded-2xl bg-slate-900/60 backdrop-blur-xl border border-white/10 hover:border-blue-500/40 transition-all space-y-2.5">
-            <div className="w-10 h-10 rounded-xl bg-indigo-600/20 border border-indigo-400/30 flex items-center justify-center text-indigo-400">
-              <Calendar className="w-5 h-5" />
-            </div>
-            <h4 className="text-sm font-bold text-white">Dual-Interface Event Tools</h4>
-            <p className="text-xs text-slate-400 leading-relaxed">
-              Visual Calendar view for date planning paired with a fast List view to quickly adjust deposits, door tickets, and headcounts.
-            </p>
-            <div className="text-[10px] text-indigo-300 font-medium pt-1 border-t border-white/5 flex items-center justify-between">
-              <span>Visual & Rapid Modes</span>
-              <span className="text-emerald-400 font-semibold">Real-Time Sync</span>
-            </div>
-          </div>
+                {/* Ambient Card Background Glow on Hover */}
+                <div className={`absolute -right-16 -top-16 w-32 h-32 rounded-full blur-2xl pointer-events-none transition-opacity duration-300 opacity-0 group-hover:opacity-100 ${app.glowAccent}`} />
 
-          {/* Card 3 */}
-          <div className="p-5 rounded-2xl bg-slate-900/60 backdrop-blur-xl border border-white/10 hover:border-blue-500/40 transition-all space-y-2.5">
-            <div className="w-10 h-10 rounded-xl bg-emerald-600/20 border border-emerald-400/30 flex items-center justify-center text-emerald-400">
-              <CreditCard className="w-5 h-5" />
-            </div>
-            <h4 className="text-sm font-bold text-white">Direct Card Payments</h4>
-            <p className="text-xs text-slate-400 leading-relaxed">
-              Custom bottle service listings and table bookings with PCI-compliant tokenization. Zero raw card details stored on servers.
-            </p>
-            <div className="text-[10px] text-emerald-300 font-medium pt-1 border-t border-white/5 flex items-center justify-between">
-              <span>PCI-DSS Tokenized</span>
-              <span className="text-emerald-400 font-semibold">Zero Liability</span>
-            </div>
-          </div>
+                <div className="relative z-10">
+                  {/* Header: Icon + Role Badge */}
+                  <div className="flex items-center justify-between gap-3 mb-4">
+                    <div className={`w-12 h-12 rounded-2xl ${app.iconBg} border flex items-center justify-center transition-all duration-300 group-hover:scale-110 shadow-sm`}>
+                      {app.icon}
+                    </div>
+                    <span className={`text-[11px] font-bold px-3 py-1 rounded-full border transition-all duration-300 group-hover:scale-105 ${app.roleBadgeClass}`}>
+                      {app.role}
+                    </span>
+                  </div>
 
-          {/* Card 4 */}
-          <div className="p-5 rounded-2xl bg-slate-900/60 backdrop-blur-xl border border-white/10 hover:border-blue-500/40 transition-all space-y-2.5">
-            <div className="w-10 h-10 rounded-xl bg-amber-600/20 border border-amber-400/30 flex items-center justify-center text-amber-400">
-              <Sparkles className="w-5 h-5" />
-            </div>
-            <h4 className="text-sm font-bold text-white">Targeted Campaigns</h4>
-            <p className="text-xs text-slate-400 leading-relaxed">
-              Pre-built SMS and email templates to automatically target birthday celebrants, VIP spenders, and headliner music fans.
-            </p>
-            <div className="text-[10px] text-amber-300 font-medium pt-1 border-t border-white/5 flex items-center justify-between">
-              <span>SMS & Email Studio</span>
-              <span className="text-emerald-400 font-semibold">98% Open Rates</span>
-            </div>
-          </div>
+                  {/* Title & Tagline */}
+                  <div className="space-y-1 mb-3">
+                    <h3 className="text-lg sm:text-xl font-bold text-slate-950 flex items-center gap-1.5 group-hover:text-blue-900 transition-colors">
+                      <span>{app.name}</span>
+                    </h3>
+                    <p className="text-xs font-semibold text-blue-700">
+                      {app.tagline}
+                    </p>
+                  </div>
+
+                  {/* Description */}
+                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mb-5">
+                    {app.description}
+                  </p>
+
+                  {/* Feature Bullet Points */}
+                  <div className="space-y-2 mb-6 pt-3 border-t border-slate-100">
+                    {app.features.map((feature, i) => (
+                      <div key={i} className="flex items-center gap-2 text-xs text-slate-700 font-medium">
+                        <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0 group-hover:scale-110 transition-transform" />
+                        <span>{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Bottom Launch Button & URL */}
+                <div className="pt-2 relative z-10">
+                  <a
+                    href={app.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`w-full py-3.5 px-4 rounded-xl font-bold text-xs sm:text-sm flex items-center justify-center gap-2 transition-all duration-200 shadow-md active:scale-[0.98] ${app.buttonClass}`}
+                  >
+                    <span>{app.buttonText}</span>
+                    <ArrowUpRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1 group-hover:-translate-y-1" />
+                  </a>
+
+                  <div className="flex items-center justify-between text-[11px] text-slate-400 font-mono mt-3 px-1">
+                    <span className="text-blue-600 font-medium group-hover:underline">{app.displayUrl}</span>
+                    <span className="flex items-center gap-1 text-emerald-600 font-sans font-semibold">
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                      Live Web App
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </ScrollReveal>
+          ))}
         </div>
       </div>
     </section>
