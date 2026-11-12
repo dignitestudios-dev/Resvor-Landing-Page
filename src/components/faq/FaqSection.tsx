@@ -11,17 +11,17 @@ interface FaqItem {
 
 const FAQS: FaqItem[] = [
   {
-    question: "What are the three Resvor web applications?",
+    question: "What are the three ResVor web applications?",
     answer:
-      "Resvor unifies three dedicated platforms: the Main Platform (resvor.com) for patrons to discover lounges and book VIP tables, the Workforce Portal (workforce.resvor.com) for floor managers and door hosts to manage live operations, and the Promoter Portal (promoter.resvor.com) for event coordinators and DJs to manage guest list allotments.",
+      "ResVor unifies three dedicated platforms: the Main Platform (resvor.com) for patrons to discover lounges and book VIP tables, the Workforce Portal (workforce.resvor.com) for floor managers and door hosts to manage live operations, and the Promoter Portal (promoter.resvor.com) for event coordinators and DJs to manage guest list allotments.",
   },
   {
     question: "Do guests or staff need to install an app from an app store?",
     answer:
-      "No. All three Resvor portals are 100% web applications. They run seamlessly in any modern browser across iOS, Android, tablets, and desktop computers with zero downloads or hardware requirements.",
+      "No. All three ResVor portals are 100% web applications. They run seamlessly in any modern browser across iOS, Android, tablets, and desktop computers with zero downloads or hardware requirements.",
   },
   {
-    question: "How can our venue or lounge get started with Resvor?",
+    question: "How can our venue or lounge get started with ResVor?",
     answer:
       "You can contact our team directly at support@lladner.com. We will guide you through setting up your venue profile, workforce accounts, and promoter access.",
   },
@@ -55,7 +55,7 @@ export default function FaqSection() {
             </h2>
 
             <p className="text-base sm:text-lg text-slate-600 leading-relaxed font-normal">
-              Quick answers about the Resvor web ecosystem and how it works for patrons, workforce, and promoters.
+              Quick answers about the ResVor web ecosystem and how it works for patrons, workforce, and promoters.
             </p>
           </div>
         </ScrollReveal>

@@ -9,7 +9,7 @@ export default function HowItWorksSection() {
     {
       number: "01",
       title: "Patron Discovery & Booking",
-      portal: "Resvor Main Platform",
+      portal: "ResVor Main Platform",
       portalUrl: "resvor.com",
       description:
         "Guests explore premier lounges, view available tables, and secure VIP reservations online with instant digital confirmation.",
@@ -20,7 +20,7 @@ export default function HowItWorksSection() {
     {
       number: "02",
       title: "Live Door & Floor Operations",
-      portal: "Resvor Workforce Portal",
+      portal: "ResVor Workforce Portal",
       portalUrl: "workforce.resvor.com",
       description:
         "Door staff and general managers verify arrivals in real time, assign tables, and monitor live venue capacity smoothly.",
@@ -31,7 +31,7 @@ export default function HowItWorksSection() {
     {
       number: "03",
       title: "Promoter & Event Allotments",
-      portal: "Resvor Promoter Portal",
+      portal: "ResVor Promoter Portal",
       portalUrl: "promoter.resvor.com",
       description:
         "Event coordinators and DJs manage guest list allocations and track live event check-ins from their dedicated portal.",
@@ -53,7 +53,7 @@ export default function HowItWorksSection() {
             </div>
 
             <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-slate-950 leading-tight">
-              How the Resvor Ecosystem Connects.
+              How the ResVor Ecosystem Connects.
             </h2>
 
             <p className="text-base sm:text-lg text-slate-600 leading-relaxed font-normal">

@@ -4,10 +4,12 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Mail, ArrowUpRight, Globe, Users, Ticket, Layers, Info, ChevronRight, HelpCircle, Sparkles } from "lucide-react";
+import ExploreWorkflowModal from "@/components/layout/ExploreWorkflowModal";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -44,7 +46,7 @@ export default function Navbar() {
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           scrolled || mobileMenuOpen
             ? "bg-[#04081c]/90 backdrop-blur-2xl border-b border-white/10 text-white shadow-xl py-3.5"
-            : "bg-[#030614]/75 backdrop-blur-xl border-b border-white/10 text-white py-4"
+            : "bg-transparent backdrop-blur-sm border-b border-white/10 text-white py-4"
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -58,7 +60,7 @@ export default function Navbar() {
               <div className="relative flex items-center drop-shadow-[0_2px_12px_rgba(37,99,235,0.3)]">
                 <Image
                   src="/resvor-logo.png"
-                  alt="Resvor - Plan Better. Party Smarter."
+                  alt="ResVor - Plan Better. Party Smarter."
                   width={140}
                   height={38}
                   className="h-8 sm:h-9 w-auto object-contain object-left group-hover:opacity-90 transition-opacity"
@@ -115,16 +117,15 @@ export default function Navbar() {
                 <span>support@lladner.com</span>
               </a>
 
-              <a
-                href="https://www.resvor.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-4 py-2 text-xs font-bold rounded-xl text-white bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 transition-all shadow-md shadow-blue-500/25 flex items-center gap-1.5 border border-blue-400/30 group active:scale-95"
+              <button
+                type="button"
+                onClick={() => setIsModalOpen(true)}
+                className="px-4 py-2 text-xs font-bold rounded-xl text-white bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 transition-all shadow-md shadow-blue-500/25 flex items-center gap-1.5 border border-blue-400/30 group active:scale-95 cursor-pointer"
               >
                 <Globe className="w-3.5 h-3.5 text-blue-200 group-hover:rotate-12 transition-transform" />
-                <span>Launch Main App</span>
+                <span>Launch Web Apps</span>
                 <ArrowUpRight className="w-3.5 h-3.5 text-blue-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-              </a>
+              </button>
             </div>
 
             {/* Smooth Modern Mobile Menu Toggle */}
@@ -210,7 +211,7 @@ export default function Navbar() {
                 <div className="w-7 h-7 rounded-lg bg-emerald-500/20 border border-emerald-400/30 flex items-center justify-center shrink-0">
                   <Info className="w-3.5 h-3.5 text-emerald-400" />
                 </div>
-                <span>About Resvor</span>
+                <span>About ResVor</span>
               </a>
             </div>
 
@@ -337,6 +338,11 @@ export default function Navbar() {
         className={`fixed inset-0 z-40 bg-black/60 backdrop-blur-sm md:hidden transition-opacity duration-300 ${
           mobileMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         }`}
+      />
+      {/* Explore Workflow / Web Apps Modal Dialog */}
+      <ExploreWorkflowModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
       />
     </>
   );

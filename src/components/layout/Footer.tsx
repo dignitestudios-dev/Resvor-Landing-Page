@@ -18,7 +18,7 @@ export default function Footer() {
               <Link href="/" className="inline-flex items-center drop-shadow-[0_4px_16px_rgba(37,99,235,0.25)] hover:opacity-95 transition-opacity">
                 <Image
                   src="/resvor-logo.png"
-                  alt="Resvor - Plan Better. Party Smarter."
+                  alt="ResVor - Plan Better. Party Smarter."
                   width={160}
                   height={44}
                   className="h-10 sm:h-11 w-auto object-contain object-left"
@@ -50,7 +50,7 @@ export default function Footer() {
                   >
                     <span className="flex items-center gap-2">
                       <Globe className="w-4 h-4 text-blue-400 group-hover:rotate-12 transition-transform" />
-                      <span>Main Platform (resvor.com)</span>
+                      <span>Main Platform (ResVor.com)</span>
                     </span>
                     <ArrowUpRight className="w-3.5 h-3.5 text-slate-500 group-hover:text-blue-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
                   </a>
@@ -107,7 +107,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <a href="#about" className="text-slate-300 hover:text-white transition-colors">
-                    About Resvor
+                    About ResVor
                   </a>
                 </li>
                 <li>
@@ -127,8 +127,16 @@ export default function Footer() {
 
         {/* Bottom Legal Copyright */}
         <div className="mt-12 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
-          <p>© 2026 Resvor Technologies Inc. All rights reserved. Plan Better. Party Smarter.</p>
-          <div>
+          <p>© 2026 ResVor Technologies Inc. All rights reserved. Plan Better. Party Smarter.</p>
+          <div className="flex items-center gap-4">
+            <Link href="/terms" className="hover:text-white transition-colors">
+              Terms of Service
+            </Link>
+            <span className="text-slate-600">|</span>
+            <Link href="/privacy" className="hover:text-white transition-colors">
+              Privacy Policy
+            </Link>
+            <span className="text-slate-600">|</span>
             <a href="https://www.resvor.com/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors font-mono">
               resvor.com
             </a>

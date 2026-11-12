@@ -31,7 +31,7 @@ export default function FeatureGrid() {
           </h2>
 
           <p className="text-base sm:text-lg text-slate-600 leading-relaxed font-normal">
-            A comprehensive architectural blueprint of the Resvor web application. Click any core module below to inspect its operational capabilities and technical specifications.
+            A comprehensive architectural blueprint of the ResVor web application. Click any core module below to inspect its operational capabilities and technical specifications.
           </p>
         </div>
 

@@ -47,7 +47,7 @@ export default function AboutSection() {
           <div className="text-center max-w-3xl mx-auto space-y-4">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-semibold uppercase tracking-wider shadow-xs hover:border-blue-300 transition-colors">
               <Building2 className="w-3.5 h-3.5 text-blue-600" />
-              <span>About Resvor</span>
+              <span>About ResVor</span>
             </div>
 
             <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-slate-950 leading-tight">
@@ -55,7 +55,7 @@ export default function AboutSection() {
             </h2>
 
             <p className="text-base sm:text-lg text-slate-600 leading-relaxed font-normal">
-              Resvor is the purpose-built web ecosystem connecting patrons, venue floor staff, and event promoters into one seamless platform.
+              ResVor is the purpose-built web ecosystem connecting patrons, venue floor staff, and event promoters into one seamless platform.
             </p>
           </div>
         </ScrollReveal>

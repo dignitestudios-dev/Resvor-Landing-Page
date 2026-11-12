@@ -18,7 +18,7 @@ export default function BottomCtaSection() {
             <div className="relative flex items-center justify-center drop-shadow-[0_10px_30px_rgba(37,99,235,0.4)] hover:scale-105 transition-transform duration-300">
               <Image
                 src="/resvor-logo.png"
-                alt="Resvor - Plan Better. Party Smarter."
+                alt="ResVor - Plan Better. Party Smarter."
                 width={220}
                 height={60}
                 className="h-12 sm:h-16 w-auto object-contain"

@@ -34,7 +34,7 @@ interface WebAppItem {
 const WEB_APPS: WebAppItem[] = [
   {
     id: "main-platform",
-    name: "Resvor Main Platform",
+    name: "ResVor Main Platform",
     tagline: "Lounge Discovery & VIP Reservations",
     role: "For Guests & Patrons",
     roleBadgeClass: "bg-blue-50 text-blue-700 border-blue-200",
@@ -49,14 +49,14 @@ const WEB_APPS: WebAppItem[] = [
     icon: <Globe className="w-6 h-6 text-blue-600 transition-transform duration-300 group-hover:rotate-12" />,
     iconBg: "bg-blue-50 border-blue-200 group-hover:bg-blue-100/80",
     buttonClass: "bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white shadow-blue-500/25 group-hover:shadow-blue-500/40",
-    buttonText: "Launch resvor.com",
+    buttonText: "Launch ResVor Platform",
     borderHover: "hover:border-blue-400/80 hover:shadow-blue-500/15",
     topAccent: "bg-gradient-to-r from-blue-500 via-indigo-500 to-blue-600",
     glowAccent: "bg-blue-500/10",
   },
   {
     id: "workforce-portal",
-    name: "Resvor Workforce Portal",
+    name: "ResVor Workforce Portal",
     tagline: "Operations & Floor Management",
     role: "For Venue Staff & GMs",
     roleBadgeClass: "bg-indigo-50 text-indigo-700 border-indigo-200",
@@ -78,7 +78,7 @@ const WEB_APPS: WebAppItem[] = [
   },
   {
     id: "promoter-portal",
-    name: "Resvor Promoter Portal",
+    name: "ResVor Promoter Portal",
     tagline: "Event Allotments & Door Tracking",
     role: "For Promoters & DJs",
     roleBadgeClass: "bg-purple-50 text-purple-700 border-purple-200",
@@ -124,7 +124,7 @@ export default function HeroSection() {
             <div className="relative flex items-center justify-center drop-shadow-[0_10px_30px_rgba(37,99,235,0.4)] hover:scale-105 transition-transform duration-300">
               <Image
                 src="/resvor-logo.png"
-                alt="Resvor - Plan Better. Party Smarter."
+                alt="ResVor - Plan Better. Party Smarter."
                 width={260}
                 height={70}
                 className="h-14 sm:h-18 w-auto object-contain"
@@ -161,7 +161,7 @@ export default function HeroSection() {
         {/* Hero Subtitle */}
         <ScrollReveal delay={350} duration={800}>
           <p className="text-base sm:text-xl text-slate-300 max-w-3xl mx-auto mb-12 sm:mb-14 leading-relaxed font-normal">
-            Resvor delivers a purpose-built web architecture connecting{" "}
+            ResVor delivers a purpose-built web architecture connecting{" "}
             <span className="text-white font-semibold">patrons</span>,{" "}
             <span className="text-white font-semibold">venue workforce</span>, and{" "}
             <span className="text-white font-semibold">event promoters</span>.{" "}

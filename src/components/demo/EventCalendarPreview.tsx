@@ -58,7 +58,7 @@ export default function EventCalendarPreview() {
           </div>
 
           <span className="text-[11px] text-blue-300 hidden md:inline">
-            Resvor Dual-Interface Scheduling Engine
+            ResVor Dual-Interface Scheduling Engine
           </span>
         </div>
 

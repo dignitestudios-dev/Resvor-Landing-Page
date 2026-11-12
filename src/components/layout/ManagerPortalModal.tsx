@@ -213,7 +213,7 @@ export default function ManagerPortalModal({ isOpen, onClose }: ManagerPortalMod
             </div>
             <h4 className="text-lg font-bold text-white">Identity Verified</h4>
             <p className="text-xs text-slate-300">
-              Launching Resvor Lounge Management Console...
+              Launching ResVor Lounge Management Console...
             </p>
           </div>
         )}

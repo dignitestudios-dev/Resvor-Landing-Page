@@ -4,7 +4,7 @@ export const TESTIMONIALS: Testimonial[] = [
   {
     id: "t-1",
     quote:
-      "Before Resvor, table no-shows were costing us upwards of $12,000 every single weekend. With automated security deposit verification and direct guest payments, our no-show rate plummeted to under 2%. The dual calendar and list views make our floor operations seamless.",
+      "Before ResVor, table no-shows were costing us upwards of $12,000 every single weekend. With automated security deposit verification and direct guest payments, our no-show rate plummeted to under 2%. The dual calendar and list views make our floor operations seamless.",
     author: "Elena Rostova",
     role: "General Operations Director",
     venue: "The Velvet Room NYC",
@@ -42,9 +42,9 @@ export const TESTIMONIALS: Testimonial[] = [
 export const FAQ_ITEMS: FaqItem[] = [
   {
     category: "Security & Payments",
-    question: "How does Resvor handle guest card data and direct payments?",
+    question: "How does ResVor handle guest card data and direct payments?",
     answer:
-      "Resvor implements end-to-end tokenization adhering strictly to PCI-DSS Level 1 security standards. Guests process payments using their own credit/debit cards or Apple Pay directly through the secure manager or patron interface. Crucially, the platform never stores sensitive raw credit card numbers or CVVs on our servers, ensuring zero card liability for your venue.",
+      "ResVor implements end-to-end tokenization adhering strictly to PCI-DSS Level 1 security standards. Guests process payments using their own credit/debit cards or Apple Pay directly through the secure manager or patron interface. Crucially, the platform never stores sensitive raw credit card numbers or CVVs on our servers, ensuring zero card liability for your venue.",
   },
   {
     category: "Events & Booking",
@@ -56,13 +56,13 @@ export const FAQ_ITEMS: FaqItem[] = [
     category: "Guest CRM",
     question: "Can we migrate our existing guest list from OpenTable, SevenRooms, or Excel spreadsheets?",
     answer:
-      "Yes. Resvor features a universal CSV import engine. You can upload existing spreadsheets containing guest names, phone numbers, emails, birthdays, and historical notes in under 60 seconds. Our concierge onboarding team also assists Enterprise clients with custom data sanitization and historical spend mapping.",
+      "Yes. ResVor features a universal CSV import engine. You can upload existing spreadsheets containing guest names, phone numbers, emails, birthdays, and historical notes in under 60 seconds. Our concierge onboarding team also assists Enterprise clients with custom data sanitization and historical spend mapping.",
   },
   {
     category: "Guest CRM",
     question: "How do custom guest attributes and birthday campaigns work?",
     answer:
-      "You can add unlimited custom fields to any guest profile—such as preferred spirits, seating preferences, corporate affiliations, and anniversary dates. Resvor's Campaign Studio automatically queries this database to trigger hyper-personalized SMS or email invitations 14 days before a guest's birthday with tailored incentives like complimentary champagne or priority booth hold.",
+      "You can add unlimited custom fields to any guest profile—such as preferred spirits, seating preferences, corporate affiliations, and anniversary dates. ResVor's Campaign Studio automatically queries this database to trigger hyper-personalized SMS or email invitations 14 days before a guest's birthday with tailored incentives like complimentary champagne or priority booth hold.",
   },
   {
     category: "Setup & Onboarding",
@@ -74,7 +74,7 @@ export const FAQ_ITEMS: FaqItem[] = [
     category: "Setup & Onboarding",
     question: "How long does it take to train lounge hosts and floor staff?",
     answer:
-      "Resvor was designed from the ground up for high-tempo nightlife environments where lighting is dim and speed is critical. Most door hosts and floor managers master the interface in less than 20 minutes. We provide interactive staff walkthroughs, printable cheat sheets, and 24/7 weekend priority operational support.",
+      "ResVor was designed from the ground up for high-tempo nightlife environments where lighting is dim and speed is critical. Most door hosts and floor managers master the interface in less than 20 minutes. We provide interactive staff walkthroughs, printable cheat sheets, and 24/7 weekend priority operational support.",
   },
 ];
 

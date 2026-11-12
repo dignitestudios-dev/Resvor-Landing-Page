@@ -4,7 +4,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://resvor.com"),
-  title: "Resvor | The Operating System for Premier Lounges & Nightlife",
+  title: "ResVor | The Operating System for Premier Lounges & Nightlife",
   description:
     "The all-in-one web operating system for premier lounges, rooftops, and nightlife venues. Connect patrons, workforce operations, and promoter networks in one place.",
   keywords: [
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     "workforce portal",
     "promoter portal",
   ],
-  authors: [{ name: "Resvor Technologies" }],
+  authors: [{ name: "ResVor Technologies" }],
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     ],
   },
   openGraph: {
-    title: "Resvor | Plan Better. Party Smarter.",
+    title: "ResVor | Plan Better. Party Smarter.",
     description: "Where every occasion finds its lounge. Explore our 3 specialized web apps for patrons, workforce operations, and event promoters.",
     type: "website",
     images: [
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
         url: "/icon-512.png",
         width: 512,
         height: 512,
-        alt: "Resvor Emblem",
+        alt: "ResVor Emblem",
       },
     ],
   },

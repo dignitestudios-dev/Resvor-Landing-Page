@@ -25,7 +25,7 @@ export default function PricingSection() {
           </h2>
 
           <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
-            Resvor offers scalable subscription tiers tailored to the operational needs of different lounge sizes and hospitality groups.
+            ResVor offers scalable subscription tiers tailored to the operational needs of different lounge sizes and hospitality groups.
           </p>
 
           {/* Billing Cycle Switcher */}
@@ -155,7 +155,7 @@ export default function PricingSection() {
         <div className="mt-14 max-w-2xl mx-auto text-center p-4 rounded-2xl bg-slate-900/60 border border-white/10 text-xs text-slate-300 flex items-center justify-center gap-2">
           <ShieldCheck className="w-5 h-5 text-emerald-400 shrink-0" />
           <span>
-            <strong className="text-white">The Resvor Direct Advantage:</strong> 0% per-booking commission cut. All guest spending and table deposits go directly to your merchant account.
+            <strong className="text-white">The ResVor Direct Advantage:</strong> 0% per-booking commission cut. All guest spending and table deposits go directly to your merchant account.
           </span>
         </div>
       </div>

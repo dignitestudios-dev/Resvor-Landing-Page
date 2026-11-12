@@ -37,7 +37,7 @@ export const PLATFORM_FEATURES: FeatureDeepItem[] = [
     title: "Visual Calendar & Rapid List Event Management",
     headline: "Switch effortlessly between visual scheduling and lightning-fast operational list views.",
     description:
-      "Whether your floor manager is planning a month of guest headliners or quickly confirming a security deposit at the door, Resvor provides the optimal dual-interface workflow.",
+      "Whether your floor manager is planning a month of guest headliners or quickly confirming a security deposit at the door, ResVor provides the optimal dual-interface workflow.",
     highlights: [
       "Visual Calendar View: Click any date and time block to inspect venue section capacity, conflicting bookings, and promoter schedules.",
       "Rapid List View: Sort and edit events on the fly, adjust attendee caps, log door ticket proceeds, and update security deposit statuses.",
