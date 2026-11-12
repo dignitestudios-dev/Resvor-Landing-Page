@@ -51,7 +51,7 @@ export default function AboutSection() {
             </div>
 
             <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-slate-950 leading-tight">
-              Built for Premier Nightlife & Lounges.
+              Designed for Premier Restaurants, Nightlife Venues, and Lounges
             </h2>
 
             <p className="text-base sm:text-lg text-slate-600 leading-relaxed font-normal">

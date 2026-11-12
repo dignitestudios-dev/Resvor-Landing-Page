@@ -23,7 +23,7 @@ export default function Home() {
         {/* 2. Unified 3-Step Flow: How the Ecosystem Connects */}
         <HowItWorksSection />
 
-        {/* 3. About Section: Built for Premier Nightlife & Lounges */}
+        {/* 3. About Section: Designed for Premier Restaurants, Nightlife Venues, and Lounges */}
         <AboutSection />
 
         {/* 4. Core Feature Highlights: Bento Cards */}
